@@ -1,11 +1,11 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css');
+
 body{
     background-color: #eee9e2;
-}
-#app{
-    width:380px;
+    font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif !important;
 }
 p{
-    line-height:170%;
+    line-height:154%;
 }
 
 .container{
@@ -21,7 +21,7 @@ p{
         height:790px;
     }
     &#uniminiTitle{
-        height:500px;
+        height:700px;
         .deco{
             position:relative;
             bottom:275px;
@@ -30,16 +30,22 @@ p{
         }
     }
     &#universityMap{
-        height:700px;
-    }
-    &#movingIcons{
-        height:450px;
+        background-color: black;
+        height:800px;
+        .movingLine{
+            height:220px;
+        }
     }
     &#unizone{
-        height:400px;
+        height:200px;
+        text-align: right;
+
     }
     &#mingle{
         height:400px;
+    }
+    &#videos{
+        height:600px;
     }
 }
 
@@ -57,18 +63,46 @@ p{
     }
 }
 
-
 #phoneMockUp img{
     position: relative;
     float: right;
-    bottom: 50px;
-    z-index: -1;
-    border-radius:20px;
+    top:2px;
+    border-top-left-radius: 20px;
 }
 
 /*text*/
-span.highlighted{
-    color:#07c083;
+span{
+    &.highlighted{
+        color:#07c083;
+    }
+    &.size12{
+        font-size:12px;
+    }
+    &.size13{
+        font-size:13px;
+    }
+    &.size14{
+        font-size:14px;
+    }
+    &.size16{
+        font-size:16px;
+    }
+    &.size36{
+        font-size:36px;
+    }
+    &.light{
+        font-weight: 300;
+    }
+    &.mid{
+        font-weight:500;
+    }
+    &.bold{
+        font-weight: bold;
+    }
+    &.grey{
+        color : #636363;
+    }
+
 }
 .title{
     margin-left:20px;

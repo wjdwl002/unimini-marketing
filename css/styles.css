@@ -1,11 +1,10 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css");
 body {
-  background-color: #eee9e2; }
-
-#app {
-  width: 380px; }
+  background-color: #eee9e2;
+  font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif !important; }
 
 p {
-  line-height: 170%; }
+  line-height: 154%; }
 
 .container {
   height: 300px; }
@@ -17,20 +16,24 @@ p {
   .container#mainVideo {
     height: 790px; }
   .container#uniminiTitle {
-    height: 500px; }
+    height: 700px; }
     .container#uniminiTitle .deco {
       position: relative;
       bottom: 275px;
       display: flex;
       justify-content: space-between; }
   .container#universityMap {
-    height: 700px; }
-  .container#movingIcons {
-    height: 450px; }
+    background-color: black;
+    height: 800px; }
+    .container#universityMap .movingLine {
+      height: 220px; }
   .container#unizone {
-    height: 400px; }
+    height: 200px;
+    text-align: right; }
   .container#mingle {
     height: 400px; }
+  .container#videos {
+    height: 600px; }
 
 .mainTitleDeco {
   background-color: black;
@@ -46,13 +49,39 @@ p {
 #phoneMockUp img {
   position: relative;
   float: right;
-  bottom: 50px;
-  z-index: -1;
-  border-radius: 20px; }
+  top: 2px;
+  border-top-left-radius: 20px; }
 
 /*text*/
 span.highlighted {
   color: #07c083; }
+
+span.size12 {
+  font-size: 12px; }
+
+span.size13 {
+  font-size: 13px; }
+
+span.size14 {
+  font-size: 14px; }
+
+span.size16 {
+  font-size: 16px; }
+
+span.size36 {
+  font-size: 36px; }
+
+span.light {
+  font-weight: 300; }
+
+span.mid {
+  font-weight: 500; }
+
+span.bold {
+  font-weight: bold; }
+
+span.grey {
+  color: #636363; }
 
 .title {
   margin-left: 20px;
