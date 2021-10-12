@@ -1,7 +1,8 @@
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css");
 body {
   background-color: #eee9e2;
-  font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif !important; }
+  font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif !important;
+  margin: 0px !important; }
 
 p {
   line-height: 154%; }
@@ -11,8 +12,18 @@ p {
   .container.border {
     border: 1px solid black; }
   .container.video {
-    height: 230px;
+    height: 182px;
+    width: 324px;
     background-color: grey; }
+    .container.video div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      width: 100%;
+      height: 100%; }
+      .container.video div div:nth-child(1) {
+        background-color: #eee9e2; }
   .container#mainVideo {
     height: 790px; }
   .container#uniminiTitle {
@@ -33,7 +44,10 @@ p {
   .container#mingle {
     height: 400px; }
   .container#videos {
-    height: 600px; }
+    height: 844px;
+    background-color: black; }
+  .container#description {
+    height: 366px; }
 
 .mainTitleDeco {
   background-color: black;
@@ -75,13 +89,19 @@ span.light {
   font-weight: 300; }
 
 span.mid {
-  font-weight: 500; }
+  font-weight: 600; }
 
 span.bold {
   font-weight: bold; }
 
 span.grey {
   color: #636363; }
+
+span.white {
+  color: white; }
+
+span.center {
+  text-align: center; }
 
 .title {
   margin-left: 20px;
@@ -96,13 +116,13 @@ span.grey {
 
 /*fixed icon*/
 #smallButtonJoinBeta {
-  width: 36px;
-  height: 36px;
+  width: 70px;
+  height: 70px;
   position: fixed;
   right: 8%;
   bottom: 7%;
   background-color: #07c083;
-  border-radius: 18px;
+  border-radius: 35px;
   border: none; }
 
 #smallButtonJoinBeta div.icon {
@@ -129,12 +149,18 @@ span.grey {
   transform: translate(-50%, 0%);
   width: 300px;
   height: 50px;
-  background-color: #07c083;
-  color: white;
+  background-color: #eee9e2;
+  color: #07c083;
   font-size: 18px;
   text-align: center;
   border-radius: 15px;
-  border: none; }
+  border: 2px solid #07c083;
+  transition: all 0.25s ease; }
+  #bigButtonJoinBeta:hover {
+    color: white;
+    background-color: #07c083; }
+  #bigButtonJoinBeta:active {
+    letter-spacing: 2px; }
 
 #linkToInstagram {
   text-align: center;
