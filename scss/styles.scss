@@ -11,6 +11,7 @@ p{
     line-height:154%;
 }
 
+/*container size*/
 .container{
     height:300px;
     &.border{
@@ -19,7 +20,7 @@ p{
     &.video{
         height:182px;
         width:324px;
-        background-color: grey;
+        background-color: rgb(31, 31, 31);
         div{
             display: flex;
             justify-content: center;
@@ -89,6 +90,63 @@ p{
     float: right;
     top:2px;
     border-top-left-radius: 20px;
+}
+
+#animation-2{
+    width:200px;
+    height:46px;
+    position: relative;
+    top:5px;
+    &:after{
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius:20px ;
+        background: $theme;
+        transition: all .35s;
+    }
+    &:hover{
+        color: #fff;
+        &:after{
+            width:100%;
+        }
+    } 
+    span{
+        position:absolute; left:24px; z-index:2;
+    }
+}
+
+#animation-1{
+    width:200px;
+    height:46px;
+    position: relative;
+    top:5px;
+    float:right;
+    &:after{
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius:20px ;
+        background: $theme;
+        transition: all .35s;
+    }
+    &:hover{
+        color: #fff;
+        &:after{
+            width:100%;
+        }
+    } 
+    span{
+        position:absolute; right:24px; z-index: 2;
+    }  
 }
 
 /*text*/

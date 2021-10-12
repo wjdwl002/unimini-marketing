@@ -7,6 +7,7 @@ body {
 p {
   line-height: 154%; }
 
+/*container size*/
 .container {
   height: 300px; }
   .container.border {
@@ -14,7 +15,7 @@ p {
   .container.video {
     height: 182px;
     width: 324px;
-    background-color: grey; }
+    background-color: #1f1f1f; }
     .container.video div {
       display: flex;
       justify-content: center;
@@ -65,6 +66,57 @@ p {
   float: right;
   top: 2px;
   border-top-left-radius: 20px; }
+
+#animation-2 {
+  width: 200px;
+  height: 46px;
+  position: relative;
+  top: 5px; }
+  #animation-2:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background: #07c083;
+    transition: all .35s; }
+  #animation-2:hover {
+    color: #fff; }
+    #animation-2:hover:after {
+      width: 100%; }
+  #animation-2 span {
+    position: absolute;
+    left: 24px;
+    z-index: 2; }
+
+#animation-1 {
+  width: 200px;
+  height: 46px;
+  position: relative;
+  top: 5px;
+  float: right; }
+  #animation-1:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background: #07c083;
+    transition: all .35s; }
+  #animation-1:hover {
+    color: #fff; }
+    #animation-1:hover:after {
+      width: 100%; }
+  #animation-1 span {
+    position: absolute;
+    right: 24px;
+    z-index: 2; }
 
 /*text*/
 span.highlighted {
