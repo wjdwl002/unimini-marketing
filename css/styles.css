@@ -1,76 +1,114 @@
-body{
-    background-color: #eee9e2;
-}
-.container{
-    height:300px;
-    border:1px solid black;
-}
-span.highlighted{
-    color:#07c083;
-}
-.title{
-    margin-left:20px;
-    font-size: 30px;
-}
-.description{
-    margin-left:20px;
-    font-size:13px;
-}
+body {
+  background-color: #eee9e2; }
 
+#app {
+  width: 380px; }
 
+p {
+  line-height: 170%; }
 
-#unizone{
-    height:600px;
-}
+.container {
+  height: 300px; }
+  .container.border {
+    border: 1px solid black; }
+  .container.video {
+    height: 230px;
+    background-color: grey; }
+  .container#mainVideo {
+    height: 790px; }
+  .container#uniminiTitle {
+    height: 500px; }
+    .container#uniminiTitle .deco {
+      position: relative;
+      bottom: 275px;
+      display: flex;
+      justify-content: space-between; }
+  .container#universityMap {
+    height: 700px; }
+  .container#movingIcons {
+    height: 450px; }
+  .container#unizone {
+    height: 400px; }
+  .container#mingle {
+    height: 400px; }
 
-#universityMap{
-    height:700px;
-}
+.mainTitleDeco {
+  background-color: black;
+  height: 40px;
+  border-radius: 25px; }
+  .mainTitleDeco#left {
+    width: 50px;
+    transform: translate(-90%, 0); }
+  .mainTitleDeco#right {
+    width: 300px;
+    transform: translate(180px, 0); }
 
+#phoneMockUp img {
+  position: relative;
+  float: right;
+  bottom: 50px;
+  z-index: -1;
+  border-radius: 20px; }
 
+/*text*/
+span.highlighted {
+  color: #07c083; }
+
+.title {
+  margin-left: 20px;
+  font-size: 30px; }
+  .title.big {
+    margin-left: 15px;
+    font-size: 60px; }
+
+.description {
+  margin-left: 20px;
+  font-size: 13px; }
 
 /*fixed icon*/
-#smallButtonJoinBeta{
-    width:36px;
-    height:36px;
-    position: fixed;
-    right:8%;
-    bottom:7%;
-    background-color: #07c083;
-    border-radius: 18px;
-    border:none;
-}
-#smallButtonJoinBeta div.icon{
-    position: relative;
-    top:10px;
-    left:4px;
-    width: 0px;
-    height: 0px;
-    border-left: 8px solid transparent;
-    border-right: 8px solid transparent;
-    border-top: 12px solid white;
-}
-#smallButtonJoinBeta div.text{
-    position: relative;
-    top:25px;
-    right:36px;
-    width:100px;
-    font-size: 12px;
-}
+#smallButtonJoinBeta {
+  width: 36px;
+  height: 36px;
+  position: fixed;
+  right: 8%;
+  bottom: 7%;
+  background-color: #07c083;
+  border-radius: 18px;
+  border: none; }
 
+#smallButtonJoinBeta div.icon {
+  position: relative;
+  top: 10px;
+  left: 4px;
+  width: 0px;
+  height: 0px;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 12px solid white; }
 
+#smallButtonJoinBeta div.text {
+  position: relative;
+  top: 25px;
+  right: 36px;
+  width: 100px;
+  font-size: 12px; }
 
 /*footer*/
-#bigButtonJoinBeta{
-    position: relative;
-    left:50%;
-    transform: translate(-50%,0%);
-    width:240px;
-    height:50px;
-    background-color: #07c083;
-    color : white;
-    font-size:18px;
-    text-align:center;
-    border-radius: 15px;
-    border:none;
-}
+#bigButtonJoinBeta {
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  width: 300px;
+  height: 50px;
+  background-color: #07c083;
+  color: white;
+  font-size: 18px;
+  text-align: center;
+  border-radius: 15px;
+  border: none; }
+
+#linkToInstagram {
+  text-align: center;
+  margin-top: 50px; }
+  #linkToInstagram img {
+    transform: translate(-20%, 30%); }
