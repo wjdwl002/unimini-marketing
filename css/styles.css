@@ -21,14 +21,16 @@ p {
   line-height: 154%; }
 
 #app {
+  height: 100%;
   display: flex;
   flex-direction: column;
-  align-content: center; }
-  @media screen and (min-width: 390px) {
+  align-content: center;
+  align-items: center;
+  justify-content: center; }
+  @media screen and (min-width: 420px) {
     #app {
-      width: 390px;
-      align-items: center; } }
-  @media screen and (max-width: 390px) {
+      width: 390px; } }
+  @media screen and (max-width: 420px) {
     #app {
       width: 100%; } }
 
