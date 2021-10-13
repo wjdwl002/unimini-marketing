@@ -31,10 +31,10 @@ p{
     align-content: center;
     align-items:center;
     justify-content: center;
-    @media screen and (min-width:420px){
-        width:390px;
+    @media screen and (min-width:450px){
+        width:450px;
     }
-    @media screen and (max-width:420px){
+    @media screen and (max-width:450px){
         width:100%;
     }
 }
