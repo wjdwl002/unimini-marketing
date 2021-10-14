@@ -9,24 +9,24 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css" />
     <link rel="stylesheet" href="./css/animate/animate.min.css">
     <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <script src="./js/wayPoint/lib/noframework.waypoints.min.js"></script>
     <title>UNIMINI</title>
 </head>
 <body>
     <div id="app">
-        <!--
         <div class="fixedIcon">
             <button id="smallButtonJoinBeta">
             </button>
         </div>
-        -->
         
         <div class="container border" id="mainVideo"></div>
         <div class="container" id="uniminiTitle">
             <div style="position:relative;top:60px;">
                 <h1 class="title big" style="margin-bottom:0px">UNIMINI</h1>
-                <p class="description animated fadeInUp" id="thing" style="margin-top:0px"><span class="highlighted size16 bold">텅 빈 대학교를 사람들로 채우자!</span></p>
-                <p class="description animated fadeInUp" style="margin-top:80px;"><span class="size12 bold">오늘은 예디대 도예관에서 도자기 클래스,<br>내일은 칸나 커피에서 맨더비 축구관람 모임 어때?</span><br><br>
+                <p class="description animated fadeInUpReady" id="thing" style="margin-top:0px"><span class="highlighted size16 bold">텅 빈 대학교를 사람들로 채우자!</span></p>
+                <p class="description animated fadeInUpReady" style="margin-top:80px;"><span class="size12 bold">오늘은 예디대 도예관에서 도자기 클래스,<br>내일은 칸나 커피에서 맨더비 축구관람 모임 어때?</span><br><br>
                     <span class="size12 grey mid">경희대학교 학우들을 위한 소셜 어플리케이션이 탄생했어요!<br>유니미니는 여러분들이 몰랐던 동 대학 학우들과 교류하고,
                     <br>이와 동시에 다양한 경험을 할 수 있도록 도와주는 플랫폼이에요.<br>새로운 캠퍼스라이프 먼저 맛보기,<br>유니미니는 함께할 경희대생 여러분들을 기다리고 있습니다.</span>
                 </p>    
@@ -37,7 +37,14 @@
             </div>
         </div>
         <div class="container" id="universityMap">
-            <div class="movingLine"></div>
+            <div class="movingLine">
+                <div class="line">
+                    <img src="./img/경희유니버@3x.png" alt="">
+                </div>
+                <div class="line">
+                    <img src="./img/미니맵@3x.png" alt="">
+                </div>
+            </div>
             <div id="phoneMockUp">
                 <img src="./img/map_sized.png" style="z-index: 2">
             </div>
@@ -52,7 +59,7 @@
             <div style="margin-left:24px"><span class="size16 mid">동 대학 학우들과의 교류</span></div>
             <div id="animation-2"><span class="size36 bold">MINGLE</span></div>
             <p class="description" style="margin-top:80px;">
-                <span class="size12 grey mid">유니미니에서는 ‘유니존’이라는 이름으로<br>
+                <span class="size12 grey mid fadeInUpReady">유니미니에서는 ‘유니존’이라는 이름으로<br>
                     경희대학교 학우들에게 상권 공간을 대여해 드립니다.<br>
                     여러분의 상상력과 기획력으로 고요한 상권에<br>
                     새로운 그림을 그려 넣어주세요!<br>
@@ -81,7 +88,7 @@
         </div>
         <div class="container" id="description">
             <p style="margin-top:30px; margin-left:24px">
-                <span class="size16 mid">유니존에서 이뤄지는<br>
+                <span class="size16 mid fadeInUpReady">유니존에서 이뤄지는<br>
                     다양한 밍글 뿐만 아니라,<br>
                     간단하게 긱식 같이 먹을 밍글도<br>
                     유니미니에서 찾아볼 수 있어요!</span>
@@ -91,19 +98,23 @@
             <button id="bigButtonJoinBeta">베타 신청하기</button>
             <div id="linkToInstagram">
                 <img id="iconInstagram" src="./img/Instagram_icon.png" style="width:40px">
-                <a href="">INSTAGRAM FOLLOW</a>
+                <a href="https://www.instagram.com/unimini_official_kr/">INSTAGRAM FOLLOW</a>
             </div>
         </footer> 
     </div>
+    <script src="./js/script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-        var waypoint = new Waypoint({
-        element: document.getElementById('thing'),
-        handler: function(direction) {
-            this.element.classList.add("fadeInUp")
-            console.log("thing");
-        }
-        })
-
+      AOS.init();
     </script>
 </body>
 </html>
+
+<!--
+    1. 고정 아이콘 스크롤 감지 따라서 보였다 안보였다
+    2. 고정 아이콘 바닥 감지시 사라짐
+    3. 스크롤 감지 해서 fadeInUp 애니메이션
+    4. 스크롤 감지 해서 양쪽에서 들어오는 애니메이션
+    5. 베타 신청하기 버튼 색 입히기
+    6. 반응형 재정비
+-->

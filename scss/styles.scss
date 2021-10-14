@@ -39,6 +39,10 @@ p{
     }
 }
 
+.fadeInUpReady{
+    visibility: hidden;
+}
+
 /*container size*/
 .container{
     width: 100%;
@@ -113,6 +117,20 @@ p{
         transform: translate(180px,0);
     }
 }
+
+.movingLine{
+    height: 70px;
+    width:100%;
+    position: relative;
+    top:75px;
+    .line{
+        img{
+            height:30px;
+            margin-bottom: 10px;
+        }
+    }
+}
+
 
 #phoneMockUp img{
     position: relative;
@@ -241,11 +259,15 @@ span{
     height:70px;
     position: fixed;
     right:8%;
-    bottom:7%;
+    bottom:-10%;
     background-color: $theme;
     border-radius: 35px;
     border:none;
     z-index: 9999;
+    transition:bottom .2s;
+    &.show{
+        bottom:5%;
+    }
 }
 #smallButtonJoinBeta div.icon{
     position: relative;
