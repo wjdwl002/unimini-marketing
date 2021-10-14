@@ -1,6 +1,12 @@
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css');
 $theme:#07c083;
 $background:#eee9e2;
+:root {
+    --textColor1: #008cff;
+    --textColor2: #fff;
+    --textColor3: #737594;
+  }
+  
 
 html{
     @media screen and (min-width:320px){
@@ -26,11 +32,9 @@ p{
 }
 #app{
     height:100%;
-    display : flex;
-    flex-direction: column;
-    align-content: center;
-    align-items:center;
-    justify-content: center;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0px);
     @media screen and (min-width:450px){
         width:450px;
     }
@@ -76,8 +80,6 @@ p{
         .deco{
             position:relative;
             bottom:275px;
-            display : flex;
-            justify-content: space-between;
         }
     }
     &#universityMap{
@@ -109,12 +111,14 @@ p{
     height:40px;
     border-radius:25px;
     &#left{
-        width:50px;
-        transform: translate(-90%,0);
+        width:300%;
+        transform: translate(-99.2%,0);
     }
     &#right{
-        width:300px;
-        transform: translate(180px,0);
+        width: 400%;
+        transform: translate(16%, 0);
+        bottom: 39px;
+        position: relative;
     }
 }
 
@@ -147,27 +151,9 @@ p{
     height:46px;
     position: relative;
     top:5px;
-    &:after{
-        position: absolute;
-        content: "";
-        top: 0;
-        left: 0;
-        width: 0;
-        height: 100%;
-        border-top-right-radius: 20px;
-        border-bottom-right-radius:20px ;
-        background: $theme;
-        transition: all .35s;
-    }
-    &:hover{
-        color: #fff;
-        &:after{
-            width:100%;
-        }
-    } 
-    span{
-        position:absolute; left:24px; z-index:2;
-    }
+    border-top-right-radius: 20px;
+    border-bottom-right-radius:20px ;
+    background: $theme;
 }
 
 #animation-1{
@@ -176,27 +162,17 @@ p{
     position: relative;
     top:5px;
     float:right;
-    &:after{
-        position: absolute;
-        content: "";
-        top: 0;
-        right: 0;
-        width: 0;
-        height: 100%;
-        border-top-left-radius: 20px;
-        border-bottom-left-radius:20px ;
-        background: $theme;
-        transition: all .35s;
-    }
-    &:hover{
-        color: #fff;
-        &:after{
-            width:100%;
-        }
-    } 
-    span{
-        position:absolute; right:24px; z-index: 2;
-    }  
+    border-top-left-radius: 20px;
+    border-bottom-left-radius:20px ;
+    background: $theme;
+}
+
+[data-aos="colorToWhite"]{
+    color:black;
+    transition-property: color;
+    &.aos-animate {
+        color:white;
+      }
 }
 
 /*text*/
@@ -294,21 +270,63 @@ span{
     transform: translate(-50%,0%);
     width:300px;
     height:50px;
-    background-color: $background;
     color : $theme;
     font-size:18px;
     text-align:center;
     border-radius: 15px;
-    border: 2px solid $theme;
-    transition: all 0.25s ease;
-    &:hover{
-        color: white;
-        background-color: $theme;
+    color: var(--textColor2);
+    background-image: linear-gradient(135deg, 
+    #07c083, #0026ff,#07c083);
+    background-size: 400%;
+    background-position: 0% 0%;
+    border:none;
+    
+    &::before {
+        content: '';
+        position: absolute;
+        left: -2px;
+        top: -2px;
+        right: -2px;
+        bottom: -2px;
+        border-radius: 26px;
+        background-image: linear-gradient(135deg, 
+        #07c083, #0026ff,#07c083);
+        background-size: 500%;
+        background-position: 0% 0%;
+        filter: blur(10px);
+        opacity: 0;
+        z-index: -1;
+        transition: opacity 0.2s;
     }
-    &:active{
-        letter-spacing: 2px;
+    
+    &:hover {
+        animation: gradientRotate 2s infinite;
+        &::before {
+        opacity: 1;
+        animation: gradientRotate 2s infinite;
+        }
+    }
+    
+    &:active {
+        color: #c3c4d5;
+    }
+    
+    &:focus {
+        &::before {
+        opacity: 1;
+        }
     }
 }
+
+@keyframes gradientRotate {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
 #linkToInstagram{
     text-align: center;
     margin-top: 50px;

@@ -27,9 +27,11 @@ p {
 
 #app {
   height: 100%;
-  position: relative;
-  left: 50%;
-  transform: translate(-50%, 0px); }
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center; }
   @media screen and (min-width: 450px) {
     #app {
       width: 450px; } }
@@ -65,7 +67,9 @@ p {
     height: 700px; }
     .container#uniminiTitle .deco {
       position: relative;
-      bottom: 275px; }
+      bottom: 275px;
+      display: flex;
+      justify-content: space-between; }
   .container#universityMap {
     background-color: black;
     height: 800px; }
@@ -87,13 +91,11 @@ p {
   height: 40px;
   border-radius: 25px; }
   .mainTitleDeco#left {
-    width: 300%;
-    transform: translate(-100%, 0); }
+    width: 50px;
+    transform: translate(-90%, 0); }
   .mainTitleDeco#right {
-    width: 400%;
-    transform: translate(16%, 0);
-    bottom: 39px;
-    position: relative; }
+    width: 300px;
+    transform: translate(180px, 0); }
 
 .movingLine {
   height: 70px;
@@ -117,26 +119,52 @@ p {
   width: 200px;
   height: 46px;
   position: relative;
-  top: 5px;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
-  background: #07c083; }
+  top: 5px; }
+  #animation-2:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background: #07c083;
+    transition: all .35s; }
+  #animation-2:hover {
+    color: #fff; }
+    #animation-2:hover:after {
+      width: 100%; }
+  #animation-2 span {
+    position: absolute;
+    left: 24px;
+    z-index: 2; }
 
 #animation-1 {
   width: 200px;
   height: 46px;
   position: relative;
   top: 5px;
-  float: right;
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
-  background: #07c083; }
-
-[data-aos="colorToWhite"] {
-  color: black;
-  transition-property: color; }
-  [data-aos="colorToWhite"].aos-animate {
-    color: white; }
+  float: right; }
+  #animation-1:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 100%;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background: #07c083;
+    transition: all .35s; }
+  #animation-1:hover {
+    color: #fff; }
+    #animation-1:hover:after {
+      width: 100%; }
+  #animation-1 span {
+    position: absolute;
+    right: 24px;
+    z-index: 2; }
 
 /*text*/
 span.highlighted {
@@ -225,15 +253,16 @@ span.center {
   transform: translate(-50%, 0%);
   width: 300px;
   height: 50px;
+  background-color: #eee9e2;
   color: #07c083;
   font-size: 18px;
   text-align: center;
   border-radius: 15px;
+  border: 2px solid #07c083;
   color: var(--textColor2);
-  background-image: linear-gradient(135deg, #07c083, #0026ff, #07c083);
+  background-image: linear-gradient(90deg, #07c083, #078cc0, #075dc0, #0065ff, #0033ff, #0065ff, #075dc0, #078cc0, #07c083);
   background-size: 400%;
-  background-position: 0% 0%;
-  border: none; }
+  background-position: 0% 0%; }
   #bigButtonJoinBeta::before {
     content: '';
     position: absolute;
@@ -242,7 +271,7 @@ span.center {
     right: -2px;
     bottom: -2px;
     border-radius: 26px;
-    background-image: linear-gradient(135deg, #07c083, #0026ff, #07c083);
+    background-image: linear-gradient(90deg, #07c083, #078cc0, #075dc0, #0065ff, #0033ff, #0065ff, #075dc0, #078cc0, #07c083);
     background-size: 500%;
     background-position: 0% 0%;
     filter: blur(10px);
