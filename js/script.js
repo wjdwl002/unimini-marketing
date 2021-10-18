@@ -58,5 +58,16 @@ function hasScrolled(){
   });
 
 
+  /*shareLink*/
+  $(document).ready(function(){
+    var clipboard = new Clipboard('.shareLinkBtn');
+    clipboard.on('success',function(e){
+      console.log("copy success");
+      document.getElementById("alertLinkCopied").classList.replace("alertInactive","alertActive");
+      setTimeout(function(){
+        document.getElementById("alertLinkCopied").classList.replace("alertActive","alertInactive");
+      },3500)
+    })
+  })
   console.log("js");
   

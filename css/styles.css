@@ -377,3 +377,51 @@ li{
   font-size: 24px;
   font-weight:600;
 }
+
+#shareLink{
+    position: relative;
+    top:10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.shareLinkBtn{
+    background-color: transparent;
+    border:transparent;
+}
+.shareLinkBtn:active,
+.shareLinkBtn:hover{
+    text-decoration: underline black;
+}
+
+#alertLinkCopied{
+    font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif !important;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:180px;
+    height:30px;
+    background-color: #eee9e2;
+    border-radius: 10px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    top:4310px;
+}
+#alertLinkCopied.alertInactive{
+    visibility: hidden;
+}
+#alertLinkCopied.alertActive{
+    visibility: visible;
+    animation:fadeUp 3.5s;
+}
+@keyframes fadeUp{
+    0% {top:4320px; opacity: 0%;}
+    20%{top:4310px; opacity: 100%;}
+    80%{top:4310px; opacity: 100%;}
+    100% {top:4320px; opacity: 0%;}
+}
