@@ -389,6 +389,7 @@ li{
 .shareLinkBtn{
     background-color: transparent;
     border:transparent;
+    font-weight: 600;
 }
 .shareLinkBtn:active,
 .shareLinkBtn:hover{
@@ -421,7 +422,7 @@ li{
 }
 @keyframes fadeUp{
     0% {top:4320px; opacity: 0%;}
-    20%{top:4310px; opacity: 100%;}
+    10%{top:4310px; opacity: 100%;}
     80%{top:4310px; opacity: 100%;}
     100% {top:4320px; opacity: 0%;}
 }
