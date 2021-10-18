@@ -1,8 +1,8 @@
 /*고정 아이콘 스크롤 이벤트*/
-
+/*
 var lastScrollTop = 0;
 var delta = 5;
-var fixBox = document.querySelector('#smallButtonJoinBeta');
+var fixBox = document.getElementById("smallButtonJoinBeta");
 var fixBoxHeight = fixBox.offsetHeight;
 var didScroll;
 //스크롤 이벤트 
@@ -34,3 +34,29 @@ function hasScrolled(){
     }
     lastScrollTop = nowScrollTop;
 }
+
+  /*movingLine*/
+  $(window).on("load resize scroll", function() {
+    $(".movingLine.top").each(function() {
+      var windowTop = $(window).scrollTop();
+      var elementTop = $(this).offset().top;
+      var leftPosition = windowTop - elementTop + 120;
+        $(this)
+          .find(".line")
+          .css({ left: leftPosition });
+    });
+  });
+  $(window).on("load resize scroll", function() {
+    $(".movingLine.bottom").each(function() {
+      var windowTop = $(window).scrollTop();
+      var elementTop = $(this).offset().top;
+      var rightPosition = windowTop - elementTop + 100;
+        $(this)
+          .find(".line")
+          .css({ left: rightPosition });
+    });
+  });
+
+
+  console.log("js");
+  

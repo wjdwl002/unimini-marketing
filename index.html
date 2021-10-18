@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1">
     <meta content="yes" name="apple-mobile-web-app-capable" />
     <meta content="minimum-scale=1.0, width=device-width, maximum-scale=1, user-scalable=no" name="viewport" /> 
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
     <link rel="stylesheet" href="./css/animate/animate.min.css">
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
-    <script src="./js/wayPoint/lib/noframework.waypoints.min.js"></script>
+    <link rel="stylesheet" href="./css/flipBox.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
     <title>UNIMINI</title>
 </head>
 <body>
@@ -24,26 +25,36 @@
         <div class="container border" id="mainVideo"></div>
         <div class="container" id="uniminiTitle">
             <div style="position:relative;top:60px;">
-                <h1 class="title big" style="margin-bottom:0px">UNIMINI</h1>
-                <p class="description animated" data-aos="fade-up" style="margin-top:0px"><span class="highlighted size16 bold">텅 빈 대학교를 사람들로 채우자!</span></p>
-                <p class="description animated" data-aos="fade-up" style="margin-top:80px;"><span class="size12 bold">오늘은 예디대 도예관에서 도자기 클래스,<br>내일은 칸나 커피에서 맨더비 축구관람 모임 어때?</span><br><br>
-                    <span class="size12 grey mid">경희대학교 학우들을 위한 소셜 어플리케이션이 탄생했어요!<br>유니미니는 여러분들이 몰랐던 동 대학 학우들과 교류하고,
-                    <br>이와 동시에 다양한 경험을 할 수 있도록 도와주는 플랫폼이에요.<br>새로운 캠퍼스라이프 먼저 맛보기,<br>유니미니는 함께할 경희대생 여러분들을 기다리고 있습니다.</span>
-                </p>    
-            </div>
-            <div class="container deco">
-                <div class="mainTitleDeco" id="left"></div>
-                <div class="mainTitleDeco" id="right"></div>
+                <h1 class="title big" style="margin-bottom:0px"><span class="shadow">UNIMINI</span></h1>
+                <p class="description animated" data-aos="fade-up" style="margin-top:0px; margin-left:16px"><span class="highlighted size16 bold">텅 빈 대학교를 꽉 채우자!</span></p>
+
+                <div class="cube" data-aos="fade-up">
+                    <p>
+                        <h4>지금 캠퍼스 근처에서,</h4>
+                        <div class="cubeTextContainer">
+                            <div class="cubeText">
+                                <ul>
+                                    <li>맨더비 축구 관람</li>
+                                    <li>도자기 클래스</li>
+                                    <li>블라인드 데이트</li>
+                                    <li>칵테일 시음회</li>
+                                </ul>
+                            </div>
+                            <h4>진행중!</h4>
+                        </div>
+                    </p>
+                </div>
+                <p class="description animated" data-aos="fade-up" style="margin-top:80px;">
+                    <span class="size12 grey mid">경희대학교 학우들을 위한 소셜 어플리케이션이 탄생했어요!<br>유니미니는 여러분들이 몰랐던 동 대학 <span class="stressed">학우들과 교류</span>하고,
+                    <br>이와 동시에 <span class="stressed">다양한 경험</span>을 할 수 있도록 도와주는 플랫폼이에요.<br><br>유튜브로 간접체험 그만하고,<br><span class="stressed">유니미니와 진짜 캠퍼스라이프 먼저 즐겨봐요!</span><br><br><span class="stressed">11월 _일 Beta 출시!</span></span>
+                </p>   
             </div>
         </div>
         <div class="container" id="universityMap">
-            <div class="movingLine">
-                <div class="line">
-                    <img src="./img/경희유니버@3x.png" alt="">
-                </div>
-                <div class="line">
-                    <img src="./img/미니맵@3x.png" alt="">
-                </div>
+            <div id="universityMapText">
+                <p><span class="shadow">
+                    KYUNGHEE<br><span class="pink">UNI</span>V<br><span class="pink">MINI</span> MAP
+                </span></p>
             </div>
             <div id="phoneMockUp">
                 <img src="./img/map_sized.png" style="z-index: 2">
@@ -55,7 +66,7 @@
                 <div data-aos="fade-left" data-aos-delay="50" id="animation-1"></div>
                 <div data-aos="colorToWhite" data-aos-delay="50" style="position: relative;
                 right: -180px;
-                top: 4px;"><span class="size36 bold">UNIZONE</span></div>
+                top: 6px;"><span class="size36 bold">UNIZONE</span></div>
             </div>
         </div>
         <div class="container" id="mingle">
@@ -63,38 +74,48 @@
             <div data-aos="fade-right" data-aos-delay="50" id="animation-2"></div>
             <div data-aos="colorToWhite" data-aos-delay="50" style="position: relative;
                 left:20px;
-                bottom:41px;"><span class="size36 bold">MINGLE</span>
+                bottom:40px;"><span class="size36 bold">MINGLE</span>
             </div>
-            <p class="description" style="margin-top:80px;" data-aos="fade-up">
-                <span class="size12 grey mid">유니미니에서는 ‘유니존’이라는 이름으로<br>
-                    경희대학교 학우들에게 상권 공간을 대여해 드립니다.<br>
+            <p class="description" style="margin-top:-10px;" data-aos="fade-up">
+                <span class="size12 grey mid">유니미니에서는 <span class="bold black">‘유니존’</span>이라는 이름으로<br>
+                    경희대학교 학우들에게 <span class="bold black">상권 공간을 대여</span>해 드립니다.<br>
                     여러분의 상상력과 기획력으로 고요한 상권에<br>
                     새로운 그림을 그려 넣어주세요!<br>
                     여러분이 기획한 ‘유니존’ 행사에서 경희대학교<br>
-                    유니미니 유저와 함께 색다른 경험을 하고, <br>
-                    뿐만 아니라 다양한 관계를 확장시킬 수 있어요.</span></p>    
+                    유니미니 유저와 함께 <span class="bold black">색다른 경험</span>을 하고, <br>
+                    뿐만 아니라 <span class="bold black">다양한 관계</span>를 확장시킬 수 있어요.</span></p>    
         </div>
         <div class="container" id="videos">
-            <div class="container video" style="position:relative; top:110px; float:left">
+            <div class="movingLine top">
+                <div class="line">
+                    <img src="./img/iconLine1.png" alt="">
+                </div>
+            </div>
+            <div class="container video" style="position:relative;">
                 <div>
                     <span class="white center size16 mid">
                         학교 근처 바에서 칵테일 시음회를</span>
                 </div>
             </div>
-            <div class="container video" style="position:relative; top:150px; float:right">
+            <div class="container video" style="position:relative; top:50px;">
                 <div>
                     <span class="white center size16 mid">아니면 카페에서 넷플릭스 소모임을</span>
                 </div>
             </div>
-            <div class="container video" style="position:relative; top:190px; float:left">
+            <div class="container video" style="position:relative; top:100px;">
                 <div>
                     <span class="white center size16 mid">금요일 공강에는<br>
                         경희대학교 도예관에서 도자기 클래스 어때요?</span>
                 </div>
             </div>
+            <div class="movingLine bottom">
+                <div class="line">
+                    <img src="./img/iconLine2.png" alt="">
+                </div>
+            </div>
         </div>
         <div class="container" id="description">
-            <p style="margin-top:30px; margin-left:24px" data-aos="fade-up">
+            <p style="margin-top:80px; margin-left:24px" data-aos="fade-up">
                 <span class="size16 mid">유니존에서 이뤄지는<br>
                     다양한 밍글 뿐만 아니라,<br>
                     간단하게 긱식 같이 먹을 밍글도<br>
@@ -105,10 +126,11 @@
             <button id="bigButtonJoinBeta">베타 신청하기</button>
             <div id="linkToInstagram">
                 <img id="iconInstagram" src="./img/Instagram_icon.png" style="width:40px">
-                <a href="https://www.instagram.com/unimini_official_kr/">INSTAGRAM FOLLOW</a>
+                <a href="https://www.instagram.com/unimini_official_kr/">unimini instagram</a>
             </div>
         </footer> 
     </div>
+    
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init({

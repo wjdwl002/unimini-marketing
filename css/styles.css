@@ -1,4 +1,4 @@
-@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css");
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
 :root {
   --textColor1: #008cff;
   --textColor2: #fff;
@@ -9,7 +9,7 @@
     width: 100%; } }
 
 body {
-  background-color: #eee9e2;
+  background-color: #fffaf2;
   font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif !important;
   margin: 0px !important;
   overflow: hidden;
@@ -25,6 +25,10 @@ html, body {
 p {
   line-height: 154%; }
 
+  h4{
+    margin:10px;
+  }
+ 
 #app {
   height: 100%;
   position: relative;
@@ -43,12 +47,13 @@ p {
 /*container size*/
 .container {
   width: 100%;
-  height: 300px; }
+  height: 300px; 
+  position: relative;}
   .container.border {
     border: 1px solid black; }
   .container.video {
-    height: 182px;
-    width: 324px;
+    height: 200px;
+    width: 100%;
     background-color: #1f1f1f; }
     .container.video div {
       display: flex;
@@ -65,9 +70,9 @@ p {
     height: 700px; }
     .container#uniminiTitle .deco {
       position: relative;
-      bottom: 275px; }
+      bottom: 360px; 
+      height:auto;}
   .container#universityMap {
-    background-color: black;
     height: 800px; }
     .container#universityMap .movingLine {
       height: 220px; }
@@ -88,30 +93,56 @@ p {
   border-radius: 25px; }
   .mainTitleDeco#left {
     width: 300%;
-    transform: translate(-100%, 0); }
+    transform: translate(-99.2%, 0); }
   .mainTitleDeco#right {
     width: 400%;
     transform: translate(16%, 0);
-    bottom: 39px;
     position: relative; }
 
-.movingLine {
+.movingLine.top {
   height: 70px;
   width: 100%;
   position: relative;
-  top: 75px; }
+  top: -15px; }
+.movingLine.bottom {
+    height: 70px;
+    width: 100%;
+    position: relative;
+    top: 155px; }
   .movingLine .line img {
     height: 30px;
     margin-bottom: 10px; }
+.movingLine .line{
+  position: relative;
+}
+
+
+#universityMapText{
+  text-align: right;
+  font-weight: 900;
+  font-size: 48px;
+  z-index: 100;
+  margin-right:25px;
+}
+#universityMapText p{
+  line-height: 48px;
+  margin: 0px;
+}
+#phoneMockUp{
+  z-index: -1;
+  width:100%;
+  height:auto;
+  position: relative;
+  bottom: 20px;
+}
 
 #phoneMockUp img {
   position: relative;
   float: right;
-  top: 2px;
-  border-top-left-radius: 20px; }
+  top: 2px; }
   @media screen and (min-width: 390px) {
     #phoneMockUp img {
-      width: 366px; } }
+      width: 100%; } }
 
 #animation-2 {
   width: 200px;
@@ -120,7 +151,9 @@ p {
   top: 5px;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
-  background: #07c083; }
+  background: #ff3a5b;
+  animation: slideOut 1.5s cubic-bezier(0.85,0,0.15,1) forwards;
+  box-shadow: 10px 10px 3px rgba(0,0,0,0.15); }
 
 #animation-1 {
   width: 200px;
@@ -130,18 +163,42 @@ p {
   float: right;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
-  background: #07c083; }
+  background:#ff3a5b;
+  animation: slideOut 1.5s cubic-bezier(0.85,0,0.15,1) forwards;
+  box-shadow: 10px 10px 3px rgba(0,0,0,0.15);}
+
+@keyframes stripes {
+  to {
+    background-size:100% 100%;
+  }
+}
 
 [data-aos="colorToWhite"] {
+  animation: slideOut 1.5s cubic-bezier(0.85,0,0.15,1) forwards;
   color: black;
-  transition-property: color; }
+  background: #eee9e2;
+  transition-property: color; 
+  }
   [data-aos="colorToWhite"].aos-animate {
-    color: white; }
+    background: linear-gradient( white,white) no-repeat 0 0;
+    background-size: 0 100%;
+    color:white;
+    }
 
 /*text*/
+span.shadow{
+  text-shadow: 10px 10px 3px rgba(0,0,0,0.15);
+}
 span.highlighted {
   color: #07c083; }
 
+span.stressed{
+  color:#058158;
+  font-weight: 900;
+}
+span.pink{
+  color: #ff3a5b
+}
 span.size12 {
   font-size: 12px; }
 
@@ -164,10 +221,13 @@ span.mid {
   font-weight: 600; }
 
 span.bold {
-  font-weight: bold; }
+  font-weight: 900; }
 
 span.grey {
   color: #636363; }
+
+span.black {
+  color: rgb(53, 53, 53); }
 
 span.white {
   color: white; }
@@ -230,7 +290,7 @@ span.center {
   text-align: center;
   border-radius: 15px;
   color: var(--textColor2);
-  background-image: linear-gradient(135deg, #07c083, #0026ff, #07c083);
+  background-image: linear-gradient(135deg, #07c083, #4661ff, #07c083, #4661ff);
   background-size: 400%;
   background-position: 0% 0%;
   border: none; }
@@ -242,7 +302,7 @@ span.center {
     right: -2px;
     bottom: -2px;
     border-radius: 26px;
-    background-image: linear-gradient(135deg, #07c083, #0026ff, #07c083);
+    background-image: linear-gradient(135deg, #07c083, #4661ff, #07c083, #4661ff);
     background-size: 500%;
     background-position: 0% 0%;
     filter: blur(10px);
@@ -270,3 +330,50 @@ span.center {
   margin-top: 50px; }
   #linkToInstagram img {
     transform: translate(-20%, 30%); }
+
+
+.cube {
+  position: relative;
+  top:40px;
+  margin-left:20px;
+}
+.cubeTextContainer{
+  display: flex;
+  align-items: center;
+}
+.cubeText{
+  width:280px;
+  height:44px;
+  background-color: #c3c4d5;
+  margin:0px;
+  border-radius: 10px;
+}
+
+
+ul,li{list-style:none;}
+    .cubeText{height:40px; width:240px; overflow:hidden;}
+    .cubeText ul{ padding:0px; height:calc(100% * 4);animation:slide 12s infinite;}
+    .cubeText li{height:calc(100% / 4);}
+    .cubeText li:nth-child(1){background:#efe9e1;}
+    .cubeText li:nth-child(2){background:#efe9e1;}
+    .cubeText li:nth-child(3){background:#efe9e1;}
+    .cubeText li:nth-child(4){background:#efe9e1;}
+    @keyframes slide {
+      0% {margin-top:0;}
+      10% {margin-top:0;}
+      25% {margin-top:-40px;}
+      35% {margin-top:-40px;}
+      50% {margin-top:-80px;}
+      60% {margin-top:-80px;}
+      75% {margin-top:-120px;}
+      85% {margin-top:-120px;}
+      100% {margin-top:0;}
+    }
+li{
+  font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight:600;
+}
