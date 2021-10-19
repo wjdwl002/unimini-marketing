@@ -29,6 +29,30 @@ p {
     margin:10px;
   }
  
+  input,textarea{
+    color: #c4c0ba;
+    display: block;
+    width: 300px;
+    height: 10px;
+    border-radius: 15px;
+    border: none;
+    margin: 10px 0px;
+    background-color: #f6f1e9;
+    padding:16px;
+    resize:none;
+}
+input::placeholder, textarea::placeholder{
+    font-family: Pretendard !important; 
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #c4c0ba;
+ }
+
 #app {
   height: 100%;
   position: relative;
@@ -279,6 +303,17 @@ span.center {
   font-size: 12px; }
 
 /*footer*/
+footer{
+    height:450px !important;
+}
+#googleFormContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin-bottom: 20px;
+}
 #bigButtonJoinBeta {
   position: relative;
   left: 50%;
@@ -390,16 +425,17 @@ li{
     background-color: transparent;
     border:transparent;
     font-weight: 600;
+    color:rgb(53, 53, 53);
 }
 .shareLinkBtn:active,
 .shareLinkBtn:hover{
-    text-decoration: underline black;
+    text-decoration: underline rgb(53, 53, 53);
 }
 
 #alertLinkCopied{
     font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif !important;
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 400;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -411,7 +447,7 @@ li{
     position: absolute;
     left: 50%;
     transform: translate(-50%, 0%);
-    top:4310px;
+    top:4520px;
 }
 #alertLinkCopied.alertInactive{
     visibility: hidden;
@@ -421,8 +457,8 @@ li{
     animation:fadeUp 3.5s;
 }
 @keyframes fadeUp{
-    0% {top:4320px; opacity: 0%;}
-    10%{top:4310px; opacity: 100%;}
-    80%{top:4310px; opacity: 100%;}
-    100% {top:4320px; opacity: 0%;}
+    0% {top:4520px; opacity: 0%;}
+    10%{top:4510px; opacity: 100%;}
+    80%{top:4510px; opacity: 100%;}
+    100% {top:4520px; opacity: 0%;}
 }
