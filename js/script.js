@@ -35,7 +35,7 @@ function hasScrolled(){
     lastScrollTop = nowScrollTop;
 }
 
-  /*movingLine*/
+  /*movingLine
   $(window).on("load resize scroll", function() {
     $(".movingLine.top").each(function() {
       var windowTop = $(window).scrollTop();
@@ -56,7 +56,7 @@ function hasScrolled(){
           .css({ left: rightPosition });
     });
   });
-
+*/
 
 /*shareLink*/
 var snackbar = document.getElementById("alertLinkCopied")

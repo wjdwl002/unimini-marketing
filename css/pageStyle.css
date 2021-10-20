@@ -338,10 +338,18 @@ span.shadow{
     top:40px;
     background-color: black;}
     .movingLine .line img {
-      margin-top: 10px;}
+      position: relative;
+      margin-top: 10px;
+      animation: movingLineAni 60s linear;}
   .movingLine .line{
     position: relative;
   }
+
+@keyframes movingLineAni{
+    0%{right:0%}
+    50%{right:150%}
+    100%{right:0%}
+}
 
 
 .iconContainer{
@@ -455,8 +463,9 @@ footer{
     border-radius: 10px;
     position: absolute;
     left: 50%;
-    transform: translate(-50%, 0%);
-    top:4520px;
+    transform: translate(-50%, 0%);    
+    top: 7710px;
+    z-index: 1000;
 }
 #alertLinkCopied.alertInactive{
     visibility: hidden;
@@ -466,10 +475,10 @@ footer{
     animation:fadeUp 3.5s;
 }
 @keyframes fadeUp{
-    0% {top:4520px; opacity: 0%;}
-    10%{top:4510px; opacity: 100%;}
-    80%{top:4510px; opacity: 100%;}
-    100% {top:4520px; opacity: 0%;}
+    0% {top:7710px; opacity: 0%;}
+    10%{top:7720px; opacity: 100%;}
+    80%{top:7720px; opacity: 100%;}
+    100% {top:7710px; opacity: 0%;}
 }
 #plusBtn{
     width:30px;
