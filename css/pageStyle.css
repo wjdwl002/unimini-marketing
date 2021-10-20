@@ -121,7 +121,7 @@ input::placeholder, textarea::placeholder{
         .videoContainer.responsive{
             width:390px;
         }
-@media screen and (max-width:390px){
+@media screen and (max-width:480px){
     .container{ width: 80%; }
     .size15.responsive{
         font-size: 13px !important;
