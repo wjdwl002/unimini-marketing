@@ -33,10 +33,10 @@ input,textarea{
     height: 10px;
     border-radius: 15px;
     border: none;
-    margin: 10px 0px;
     background-color: #f6f1e9;
     padding:16px;
     resize:none;
+    margin-bottom: 10px;
 }
 input::placeholder, textarea::placeholder{
     font-family: Pretendard !important; 
@@ -100,8 +100,7 @@ input::placeholder, textarea::placeholder{
     .container.video {
     padding:0px;
     height: 220px;
-    width: 100%;
-    background-color: #1f1f1f; }
+    width: 100%;}
     .container.videoText {
         height: 100px;
         width: 100%;
@@ -115,10 +114,16 @@ input::placeholder, textarea::placeholder{
       height: 100%; }
       .container.video div div:nth-child(1) {
         background-color: #eee9e2; }
+        .videoContainer.responsive{
+            width:390px;
+        }
 @media screen and (max-width:390px){
     .container{ width: 80%; }
     .size15.responsive{
         font-size: 13px !important;
+    }
+    input.half{
+        width:80%;
     }        
 }
 @media screen and (min-width:760px){
@@ -126,9 +131,6 @@ input::placeholder, textarea::placeholder{
         display: flex;
         flex-direction: column;
         align-items: center;
-    }
-    .videoContainer.responsive{
-        width:760px;
     }
 }
 .flexContainer{
@@ -484,3 +486,16 @@ footer{
     display: flex;
     align-items: center;
 }
+
+.video:nth-child(1){
+    background-image: url(../img/);
+}
+
+
+[data-aos="videoActive"] {
+        opacity: 0.1;
+
+    }
+    [data-aos="videoActive"].aos-animate {
+        opacity: 1;
+      }
