@@ -67,7 +67,7 @@ input::placeholder, textarea::placeholder{
 .container {
     width: 390px;
     height: 300px; 
-    padding: 2rem;}
+    padding: 4rem;}
     .container.border {
         border: 1px solid black; }
     .container#mainVideo {
@@ -91,10 +91,11 @@ input::placeholder, textarea::placeholder{
     .container#mingle {
         height: 550px; }
     .container#videos {
-        width: 100%;
         height: 1800px;
         background-color: black; 
-        padding:0px;}
+        display: flex;
+        flex-direction: column;
+        align-items: center;}
     .container#googleForm {
         height: 600px;}
     .container.video {
@@ -104,7 +105,7 @@ input::placeholder, textarea::placeholder{
     .container.videoText {
         height: 100px;
         width: 100%;
-        padding-top:0px;}
+        padding:0px;}
     .container.video div {
       display: flex;
       justify-content: center;
@@ -126,13 +127,7 @@ input::placeholder, textarea::placeholder{
         width:80%;
     }        
 }
-@media screen and (min-width:760px){
-    .container#videos{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-}
+
 .flexContainer{
     display: flex;
     justify-content: space-between;
