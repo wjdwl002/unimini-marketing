@@ -25,9 +25,9 @@ html, body {
 p {
   line-height: 154%; }
 
-  h4{
+h4{
     margin:10px;
-  }
+}
  
   input,textarea{
     color: #c4c0ba;
@@ -72,7 +72,8 @@ input::placeholder, textarea::placeholder{
 .container {
   width: 100%;
   height: 300px; 
-  position: relative;}
+  position: relative;
+padding:24px;}
   .container.border {
     border: 1px solid black; }
   .container.video {
@@ -91,18 +92,15 @@ input::placeholder, textarea::placeholder{
   .container#mainVideo {
     height: 790px; }
   .container#uniminiTitle {
-    height: 700px; }
-    .container#uniminiTitle .deco {
-      position: relative;
-      bottom: 360px; 
-      height:auto;}
+    height: 600px; }
+  .container#textBox1{
+    height: 440px;}
+  .container#textBox2{
+    height: 480px;}
   .container#universityMap {
-    height: 800px; }
-    .container#universityMap .movingLine {
-      height: 220px; }
+    height: 1000px; }
   .container#unizone {
-    height: 200px;
-    text-align: right; }
+    height: 600px;}
   .container#mingle {
     height: 400px; }
   .container#videos {
@@ -149,24 +147,15 @@ input::placeholder, textarea::placeholder{
   margin-right:25px;
 }
 #universityMapText p{
-  line-height: 48px;
-  margin: 0px;
+    line-height:30px;
+  text-align: left;
 }
-#phoneMockUp{
+#phoneMockUp img{
   z-index: -1;
-  width:100%;
+  width:400px;
   height:auto;
   position: relative;
-  bottom: 20px;
 }
-
-#phoneMockUp img {
-  position: relative;
-  float: right;
-  top: 2px; }
-  @media screen and (min-width: 390px) {
-    #phoneMockUp img {
-      width: 100%; } }
 
 #animation-2 {
   width: 200px;
@@ -223,6 +212,9 @@ span.stressed{
 span.pink{
   color: #ff3a5b
 }
+span.darkgreen{
+    color:#00744e;
+}
 span.size12 {
   font-size: 12px; }
 
@@ -232,19 +224,34 @@ span.size13 {
 span.size14 {
   font-size: 14px; }
 
+span.size15 {
+  font-size: 15px; }
+
 span.size16 {
   font-size: 16px; }
 
-span.size36 {
-  font-size: 36px; }
+span.size26 {
+  font-size: 26px; }
 
-span.light {
+span.size36 {
+    font-size: 36px; } 
+
+span.weight300 {
   font-weight: 300; }
 
-span.mid {
-  font-weight: 600; }
+span.weight400 {
+  font-weight: 400; }
 
-span.bold {
+span.weight500 {
+    font-weight: 500; }
+
+span.weight600 {
+    font-weight: 600; }
+
+span.weight800 {
+  font-weight: 800; }
+
+  span.weight900  {
   font-weight: 900; }
 
 span.grey {
@@ -259,12 +266,30 @@ span.white {
 span.center {
   text-align: center; }
 
+span.smallTitle{
+    font-size: 15px;
+  font-weight: 800;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.6;
+  letter-spacing: normal;
+  text-align: left;
+  color: #00a871;
+}
+
 .title {
-  margin-left: 20px;
   font-size: 30px; }
   .title.big {
     margin-left: 15px;
-    font-size: 60px; }
+    font-size: 34px; 
+    font-weight: 900;
+    margin-top:5px;}
+.title.small{
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.5;
+    color: #000;
+}
 
 .description {
   margin-left: 20px;
@@ -369,49 +394,58 @@ footer{
 
 .cube {
   position: relative;
-  top:40px;
+  top:160px;
   margin-left:20px;
 }
 .cubeTextContainer{
   display: flex;
+  flex-direction: column;
   align-items: center;
 }
 .cubeText{
-  width:280px;
-  height:44px;
-  background-color: #c3c4d5;
-  margin:0px;
-  border-radius: 10px;
+  width:342px;
+  height:56px;
+}
+.textBox{
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.08);
+    margin:0px;
+    margin-bottom: 16px;
+    border-radius: 18px;
+    line-height: 1.6;
+    padding:26px;
+}
+.textBox.white{
+    background-color: #fff;
+}
+.textBox.green{
+    background-color: #d3e0dc;
+}
+#joinTextBox{
+    margin-left:16px;
+    width: 342px;
+    height:200px;
+    padding:26px;
 }
 
-
 ul,li{list-style:none;}
-    .cubeText{height:40px; width:240px; overflow:hidden;}
+    .cubeText{height:56px; width:342px; overflow:hidden;}
     .cubeText ul{ padding:0px; height:calc(100% * 4);animation:slide 12s infinite;}
     .cubeText li{height:calc(100% / 4);}
-    .cubeText li:nth-child(1){background:#efe9e1;}
-    .cubeText li:nth-child(2){background:#efe9e1;}
-    .cubeText li:nth-child(3){background:#efe9e1;}
-    .cubeText li:nth-child(4){background:#efe9e1;}
+    .cubeText li:nth-child(1){background:#fff;}
+    .cubeText li:nth-child(2){background:#fff;}
+    .cubeText li:nth-child(3){background:#fff;}
+    .cubeText li:nth-child(4){background:#fff;}
     @keyframes slide {
       0% {margin-top:0;}
       10% {margin-top:0;}
-      25% {margin-top:-40px;}
-      35% {margin-top:-40px;}
-      50% {margin-top:-80px;}
-      60% {margin-top:-80px;}
-      75% {margin-top:-120px;}
-      85% {margin-top:-120px;}
+      25% {margin-top:-56px;}
+      35% {margin-top:-56px;}
+      50% {margin-top:-112px;}
+      60% {margin-top:-112px;}
+      75% {margin-top:-168px;}
+      85% {margin-top:-168px;}
       100% {margin-top:0;}
-    }
-li{
-  font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif !important;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 24px;
-  font-weight:600;
-}
+    } 
 
 #shareLink{
     position: relative;

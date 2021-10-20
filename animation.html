@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div data-aos="fade-left" data-aos-delay="50" id="animation-1"></div>
+    <div data-aos="colorToWhite" data-aos-delay="50" style="position: relative;
+                right: -180px;
+                top: 6px;"><span class="size36 bold">UNIZONE</span></div>
+            
+</body>
+<style>
+
+[data-aos="colorToWhite"] {
+  animation: slideOut 1.5s cubic-bezier(0.85,0,0.15,1) forwards;
+  color: black;
+  background: #eee9e2;
+  transition-property: color; 
+  }
+  [data-aos="colorToWhite"].aos-animate {
+    background: linear-gradient( white,white) no-repeat 0 0;
+    background-size: 0 100%;
+    color:white;
+    }
+</style>
+</html>
