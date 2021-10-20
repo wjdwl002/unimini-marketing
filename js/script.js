@@ -60,6 +60,7 @@ function hasScrolled(){
 
 /*shareLink*/
 var snackbar = document.getElementById("alertLinkCopied")
+
   $(document).ready(function(){
     var clipboard = new Clipboard('.shareLinkBtn');
     snackbar.innerHTML="클립보드에 복사되었습니다."
@@ -75,7 +76,6 @@ var snackbar = document.getElementById("alertLinkCopied")
 
 
 /*spread sheet API*/
-snackbar.innerHTML="베타 신청이 완료되었습니다."
 var inputs = $('input[type="text"]');
 var googleSubmitBtn = $('#bigButtonJoinBeta');
 
@@ -127,7 +127,8 @@ $('#bigButtonJoinBeta').click(function () {
     },
     success: function (response) {
       isLoading(false);
-
+      
+    snackbar.innerHTML="베타 신청이 완료되었습니다."
       snackbar.classList.replace('alertInactive','alertActive');
       setTimeout(function () {
         snackbar.classList.replace('alertActive','alertInactive');

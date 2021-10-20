@@ -67,37 +67,40 @@ input::placeholder, textarea::placeholder{
 .container {
     width: 390px;
     height: 300px; 
-    padding: 4rem;}
+    padding-left: 4rem;
+    padding-right: 4rem;
+    padding-top:2rem;
+    padding-bottom: 3rem;}
     .container.border {
         border: 1px solid black; }
     .container#mainVideo {
         height: 790px; }
     .container#uniminiTitle{
-        height: 620px;
+        height: 400px;
     }
     .container#textBox1{
         height:360px;
     }
     .container#textBox2{
-        height:440px;
+        height:250px;
     }
     .container#textBox3{
-        height:430px;
+        height:400px;
     }
     .container#universityMap {
-        height: 750px; }
+        height: 700px; }
     .container#unizone {
         height: 550px;}
     .container#mingle {
         height: 550px; }
     .container#videos {
-        height: 1800px;
+        height: 1700px;
         background-color: black; 
         display: flex;
         flex-direction: column;
         align-items: center;}
     .container#googleForm {
-        height: 600px;}
+        height: 500px;}
     .container.video {
     padding:0px;
     height: 220px;
@@ -340,7 +343,7 @@ span.shadow{
     .movingLine .line img {
       position: relative;
       margin-top: 10px;
-      animation: movingLineAni 60s linear;}
+      animation: movingLineAni 60s linear infinite;}
   .movingLine .line{
     position: relative;
   }
@@ -361,7 +364,7 @@ span.shadow{
 
 #betaText{
     position: relative;
-    top:100px;
+    top:60px;
 }
 
 
@@ -464,7 +467,7 @@ footer{
     position: absolute;
     left: 50%;
     transform: translate(-50%, 0%);    
-    top: 7710px;
+    top: 5800px;
     z-index: 1000;
 }
 #alertLinkCopied.alertInactive{
@@ -475,10 +478,10 @@ footer{
     animation:fadeUp 3.5s;
 }
 @keyframes fadeUp{
-    0% {top:7710px; opacity: 0%;}
-    10%{top:7720px; opacity: 100%;}
-    80%{top:7720px; opacity: 100%;}
-    100% {top:7710px; opacity: 0%;}
+    0% {top:5800px; opacity: 0%;}
+    10%{top:5790px; opacity: 100%;}
+    80%{top:5790px; opacity: 100%;}
+    100% {top:5800px; opacity: 0%;}
 }
 #plusBtn{
     width:30px;
