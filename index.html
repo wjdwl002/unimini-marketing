@@ -13,11 +13,13 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js" integrity="sha512-eP6ippJojIKXKO8EPLtsUMS+/sAGHGo1UN/38swqZa1ypfcD4I0V/ac5G3VzaHfDaklFmQLEs51lhkkVaqg60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollToPlugin.min.js" integrity="sha512-eI+25yMAnyrpomQoYCqvHBmY4dLfqKWPnD4j8y0E3Js+yqpF26xncL4t81M1zxC+ISYfRoCN52rN/n0q2UIBZQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <title>UNIMINI</title>
 </head>
 <body>
     <div id="app">
-        <button class="fixedIcon" onclick="scrollDown">
+        <button class="fixedIcon show" onclick="autoScrollDown()">
             <div><span class="white weight700">11월 중순 베타 예약! <span class="size16">↓</span> </span></div>
         </button>
         <div class="container" id="uniminiTitle">
@@ -48,15 +50,15 @@
             <div class="textBox black" id="uniminiIntroTextBox">
                 <div class="flexContainer justifyStart">
                     <div class="right_align uniminiIntroTitle"><span class="size18 responsive white weight600">공간에</span></div>
-                    <div class="textCloud pink round button-4"><span class="size24 weight800 responsive" data-aos="colorToWhite" data-aos-delay="50">문화를</span></div>
+                    <div class="textCloud pink round button-4" data-aos="fade-left"><span class="size24 weight800 responsive" data-aos="colorToWhite" data-aos-delay="50">문화를</span></div>
                 </div>
                 <div class="flexContainer justifyStart">
                     <div class="right_align uniminiIntroTitle"><span class="size18 responsive white weight600">문화를 통해서</span></div>
-                    <div class="textCloud green round"><span class="size24 weight800 responsive" data-aos="colorToWhite" data-aos-delay="50">교류를</span></div>
+                    <div class="textCloud green round" data-aos="fade-left"><span class="size24 weight800 responsive" data-aos="colorToWhite" data-aos-delay="50">교류를</span></div>
                 </div>
                 <div class="flexContainer justifyStart">
                     <div class="right_align uniminiIntroTitle"><span class="size18 responsive white weight600">교류 속에서</span></div>
-                    <div class="textCloud pink round" ><span class="size24 weight800 responsive" data-aos="colorToWhite" data-aos-delay="50">시야의 확장을</span></div>
+                    <div class="textCloud pink round" data-aos="fade-left"><span class="size24 weight800 responsive" data-aos="colorToWhite" data-aos-delay="50">시야의 확장을</span></div>
                 </div>
             </div>
         </div>
@@ -212,5 +214,12 @@
       });
     </script>
     <script src="./js/script.js"></script>
+    <script>  
+        function autoScrollDown(){
+        var offset = $("#bigButtonJoinBeta").offset();
+        console.log(offset);
+        $('html, body').animate({scrollTop : offset.top - 700}, 400);
+        }
+    </script>
 </body>
 </html>

@@ -453,7 +453,7 @@ footer{
   text-align: center;
   border-radius: 25px;
   color: var(--textColor2);
-  background-image: linear-gradient(135deg, #07c083, #4661ff, #07c083, #4661ff);
+  background-image: linear-gradient(135deg, #07c083, #46acff, #07c083, #46acff);
   background-size: 400%;
   background-position: 0% 0%;
   border: none; 
@@ -466,7 +466,7 @@ footer{
     right: -2px;
     bottom: -2px;
     border-radius: 26px;
-    background-image: linear-gradient(135deg, #07c083, #4661ff, #07c083, #4661ff);
+    background-image: linear-gradient(135deg, #07c083, #46acff, #07c083, #46acff);
     background-size: 500%;
     background-position: 0% 0%;
     filter: blur(10px);
@@ -532,7 +532,7 @@ footer{
     position: absolute;
     left: 50%;
     transform: translate(-50%, 0%);    
-    top: 5850px;
+    bottom: 380px;
     z-index: 1000;
 }
 #alertLinkCopied.alertInactive{
@@ -543,10 +543,10 @@ footer{
     animation:fadeUp 3.5s;
 }
 @keyframes fadeUp{
-    0% {top:5850px; opacity: 0%;}
-    10%{top:5840px; opacity: 100%;}
-    80%{top:5840px; opacity: 100%;}
-    100% {top:5850px; opacity: 0%;}
+    0% {bottom: 380px; opacity: 0%;}
+    10%{bottom: 390px; opacity: 100%;}
+    80%{bottom: 390px; opacity: 100%;}
+    100% {bottom: 380px; opacity: 0%;}
 }
 #plusBtn{
     width:30px;
@@ -597,9 +597,13 @@ footer{
     justify-content: center;
     align-items: center;
     position: fixed;
-    bottom:40px;
+    bottom:-90px;
     z-index: 10000;
     border:none;
+    transition: bottom .2s;
+}
+.fixedIcon.show{
+    bottom:40px;
 }
 
 /*data-aos*/

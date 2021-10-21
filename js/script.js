@@ -1,10 +1,10 @@
-/*고정 아이콘 스크롤 이벤트*/
-/*
+//Javascript
 var lastScrollTop = 0;
 var delta = 5;
-var fixBox = document.getElementById("smallButtonJoinBeta");
+var fixBox = document.querySelector('.fixedIcon');
 var fixBoxHeight = fixBox.offsetHeight;
 var didScroll;
+var offset = $("#bigButtonJoinBeta").offset();
 //스크롤 이벤트 
 window.onscroll = function(e) {
     didScroll = true;
@@ -18,21 +18,21 @@ setInterval(function(){
     }
 }, 250);
 
+//Javascript
 function hasScrolled(){
-    var nowScrollTop = window.scrollY;
-    if(Math.abs(lastScrollTop - nowScrollTop) <= delta){
-        return;
-    }
-    if(nowScrollTop > lastScrollTop && nowScrollTop > fixBoxHeight){
-    //Scroll down
-    fixBox.classList.remove("show")
-    }else{
-    if(nowScrollTop + window.innerHeight < document.body.offsetHeight){
-    //Scroll up
-    fixBox.classList.add("show")
-        }
-    }
-    lastScrollTop = nowScrollTop;
+  var nowScrollTop = window.scrollY;
+  if(Math.abs(lastScrollTop - nowScrollTop) <= delta){
+      return;
+  }
+  if(nowScrollTop > offset.top- 800){
+      //Scroll down (하단 고정메뉴 숨김)
+      console.log(1);
+      fixBox.classList.remove('show');
+  }
+  else{
+    fixBox.classList.add('show');
+  }
+  lastScrollTop = nowScrollTop;
 }
 
   /*movingLine
@@ -149,9 +149,3 @@ $('#bigButtonJoinBeta').click(function () {
     }
   });
 });
-
-function scrollDown(){
-  $('html,body').stop().animate({
-    scrollDown: $('#bigButtonJoinBeta').offset().top
-  });
-}
