@@ -35,6 +35,48 @@ function hasScrolled(){
   lastScrollTop = nowScrollTop;
 }
 
+const videoContainer1 = document.getElementsByClassName("videoContainer")[0];
+const video1 = document.getElementsByTagName("video")[0];
+setInterval(videoCheck,300);
+
+function videoCheck(){
+  if(videoContainer1.classList[2] != "aos-animate"){
+    video1.pause();
+    console.log("pause");
+  }else{
+    video1.play();
+    console.log("play");
+  };
+}
+
+const videoContainer2 = document.getElementsByClassName("videoContainer")[1];
+const video2 = document.getElementsByTagName("video")[1];
+setInterval(videoCheck,300);
+
+function videoCheck(){
+  if(videoContainer2.classList[2] != "aos-animate"){
+    video2.pause();
+    console.log("pause");
+  }else{
+    video2.play();
+    console.log("play");
+  };
+}
+
+const videoContainer3 = document.getElementsByClassName("videoContainer")[2];
+const video3 = document.getElementsByTagName("video")[2];
+setInterval(videoCheck,300);
+
+function videoCheck(){
+  if(videoContainer3.classList[2] != "aos-animate"){
+    video3.pause();
+    console.log("pause");
+  }else{
+    video3.play();
+    console.log("play");
+  };
+}
+
   /*movingLine
   $(window).on("load resize scroll", function() {
     $(".movingLine.top").each(function() {

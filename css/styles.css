@@ -106,7 +106,8 @@ input::placeholder, textarea::placeholder{
     .container.videoText {
         height: 100px;
         width: 100%;
-        padding:0px;}
+        padding:0px;
+        margin:0px}
     .container.video div {
       display: flex;
       justify-content: center;
@@ -613,7 +614,7 @@ footer{
 }
 [data-aos="videoActive"].aos-animate {
     opacity: 1;
-  }
+}
 [data-aos="shake"].aos-animate{
 animation: shake 1s;
 /* When the animation is finished, start again */
