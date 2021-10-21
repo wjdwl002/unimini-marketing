@@ -149,3 +149,9 @@ $('#bigButtonJoinBeta').click(function () {
     }
   });
 });
+
+function scrollDown(){
+  $('html,body').stop().animate({
+    scrollDown: $('#bigButtonJoinBeta').offset().top
+  });
+}

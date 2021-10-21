@@ -8,7 +8,8 @@
     <meta content="minimum-scale=1.0, width=device-width, maximum-scale=1, user-scalable=no" name="viewport" /> 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
     <link rel="stylesheet" href="./css/animate/animate.min.css">
-    <link rel="stylesheet" href="./css/pageStyle.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/fireworks.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script>
@@ -16,13 +17,19 @@
 </head>
 <body>
     <div id="app">
+        <button class="fixedIcon" onclick="scrollDown">
+            <div><span class="white weight700">11월 중순 베타 예약! <span class="size16">↓</span> </span></div>
+        </button>
         <div class="container" id="uniminiTitle">
-            <div style="position:relative;top:60px;">
+            <div style="margin-top:60px;">
                 <div><span class="smallTitle size18">캠퍼스 라이프의 시작!</span></div>
                 <div><span class="mainTitle">유니미니</span></div>
             </div>
-            <div class="cube" data-aos="fade-up">
-                <p>
+            <div>
+                <div id="phoneMockUp">
+                    <img src="./img/map_sized.jpeg" style="border-radius:30px; width:100%; height:256px">
+                </div>
+                <div class="cube" data-aos="fade-up">
                     <div class="cubeTextContainer">
                         <div class="cubeText textBox">
                             <ul>
@@ -34,43 +41,29 @@
                         </div>
                         <div><span class="size15 responsive weight600">지금 캠퍼스 근처에서 진행중!</span></div>
                     </div>
-                </p>
-            </div>
-        </div>
-        <div class="container" id="textBox1">
-            <div><span class="bigTitle">대학가에<br> 오프라인 문화를!</span></div>
-            <div class="textBox white padding" style="height:220px; margin-top:20px;">
-                <div>
-                    <span class="size15 responsive weight500 grey">학우들이 기획한<br>다양한 체험 이벤트에 참여하거나<br>직접 개최해보세요.<br><br>다양한 관점을 가진 학우들과 교류하면서<br>시야의 확장을 경험하세요!</span>
-                </div>
-                <div class="iconContainer">
-                    <div class="textCloud pink"><span class="white weight600">함께하기</span></div>
-                    <div id="plusBtn"><span class="white weight900 size18"></span></div>
                 </div>
             </div>
         </div>
         <div class="container" id="textBox2">
-            <p><span class="grey weight600 size15 responsive">유튜브로 간접체험 그만하고,<br>유니미니와 함께<br><span class="darkgreen weight800">진짜 캠퍼스라이프</span>를 먼저 즐겨봐요!</span></p>
-            <div><span class="weight800 size26">11월 중순 Beta 출시!</span>
-                <span>
-                    <img src="./img/party-popper-icon.png" alt="" style="width:40px; transform: translate(30%, 20%);">
-                </span>
-            </div>
-        </div>
-        <div class="container" id="universityMap">
-            <div id="universityMapText">
-                <p><span class="bigTitle weight900">
-                    KYUNGHEE <span class="highlighted">UNI</span>V<br><span class="highlighted">MINI</span> MAP
-                </span></p>
-            </div>
-            <div id="phoneMockUp">
-                <img src="./img/map_sized.jpeg" style="border-radius:30px; width:100%">
+            <div class="textBox black" id="uniminiIntroTextBox">
+                <div class="flexContainer justifyStart">
+                    <div class="right_align uniminiIntroTitle"><span class="size18 responsive white weight600">공간에</span></div>
+                    <div class="textCloud pink round button-4"><span class="size24 weight800 responsive" data-aos="colorToWhite" data-aos-delay="50">문화를</span></div>
+                </div>
+                <div class="flexContainer justifyStart">
+                    <div class="right_align uniminiIntroTitle"><span class="size18 responsive white weight600">문화를 통해서</span></div>
+                    <div class="textCloud green round"><span class="size24 weight800 responsive" data-aos="colorToWhite" data-aos-delay="50">교류를</span></div>
+                </div>
+                <div class="flexContainer justifyStart">
+                    <div class="right_align uniminiIntroTitle"><span class="size18 responsive white weight600">교류 속에서</span></div>
+                    <div class="textCloud pink round" ><span class="size24 weight800 responsive" data-aos="colorToWhite" data-aos-delay="50">시야의 확장을</span></div>
+                </div>
             </div>
         </div>
         <div class="container" id="unizone">
             <div><span class="smallTitle">Unizone 유니존</span></div>
-            <div><span class="bigTitle">학생들의 기획으로 <br>상권 재탄생</span></div>
-            <div class="textBox padding green" style="height:270px; margin-top:20px;">
+            <div><span class="bigTitle">대학가에 문화를</span></div>
+            <div class="textBox padding green" style="height:240px; margin-top:20px;">
                 <span class="size15 responsive grey weight500">
                     유니미니에서는 '<span class="black weight600">유니존</span>'이라는 이름으로<br>
                     경희대 학우들에게 <span class="black weight600">상권 공간을 대여</span>해 드립니다. <br>
@@ -78,19 +71,16 @@
                     문화를 불어넣어주세요!
                 </span>
                 <div>
-                    <span><img src="./img/unimini-badge-icon.png" alt="" style="width:140px; float:right; margin-top: 80px;"></span>
+                    <span><img src="./img/unimini-badge-icon.png" alt="" style="width:90%; margin-top: 40px; margin-left: 5%;"></span>
                 </div>
             </div>
         </div>
         <div class="container" id="mingle">
-            <div><span class="smallTitle">Mingle 밍글</span></div>
-            <div><span class="bigTitle">동 대학 학우들과의 교류</span></div>
-            <div class="textBox padding green" style="height:270px; margin-top:20px;">
+            <div style="text-align: right;"><span class="smallTitle">Mingle 밍글</span></div>
+            <div style="text-align: right;"><span class="bigTitle">동 대학 학우들과의<br>즐거운 만남</span></div>
+            <div class="textBox padding green" style="height:170px; margin-top:20px;">
                 <span class="size15 responsive grey weight500">
-                    '<span class="black weight600">밍글</span>'은 상권 대여와 관계없이<br>
-                    가볍게 개최하고 더 빠르게 학우들과 교류할 수 있는<br>
-                    소모임 서비스에요.<br><br>
-                    함께할 친구들을 밍글에서 찾아보세요!
+                    '<span class="black weight600">306개의 다양한 타과 친구들을 만나<br>생각을 나눠요!
                 </span>
                 <div style="margin-top:40px;">
                     <div class="textCloud mingleEx" data-aos="shake"><span class="size15 responsive weight600 responsive">선승관 3시 같이 운동할 친구</span></div>
@@ -101,7 +91,7 @@
         <div class="container" id="videos">
             <div>
                 <div style="padding-top:2rem">
-                    <div style="height:250px">
+                    <div style="height:140px">
                     <div><span class="smallTitle">먼저 체험해본 유니미니!</span></div>
                     <div><span class="bigTitle white">유니미니 미리보기</span></div>
                 </div>
@@ -112,7 +102,7 @@
                     <video src="./img/cocktail_sized.mp4" style="pointer-events: none;" playinlin preload="metadata" frameborder="0" autoplay="true" width="100%" height="100%" loop=""></video>
                     </div>
                     <p class="container videoText">
-                        <span class="size20 lightGrey weight800">
+                        <span class="size15 lightGrey weight800">
                             학교 근처 바에서<br>
                             칵테일 시음회를</span>
                         </p>
@@ -122,7 +112,7 @@
                     <video src="./img/partyRoom_sized.mp4" style="pointer-events: none;" playinlin preload="metadata" frameborder="0" autoplay="true" width="100%" height="100%" loop=""></video>
                     </div>
                     <p class="container videoText right_align" style="position:relative">
-                        <span class="size20 lightGrey weight800">
+                        <span class="size15 lightGrey weight800">
                             아니면 카페에서<br>넷플릭스 소모임을</span>
     
                         </p>
@@ -132,7 +122,7 @@
                     <video src="./img/pottery_sized.mp4" style="pointer-events: none;" playinlin preload="metadata" frameborder="0" autoplay="true" width="100%" height="100%" loop=""></video>
                     </div>
                     <p class="container videoText">
-                        <span class="size20 lightGrey weight800">
+                        <span class="size15 lightGrey weight800">
                             공강에는<br>
                             경희대학교 도예관에서<br>도자기 클래스 어때요?</span>
                         </p>
@@ -157,16 +147,14 @@
             
         </div>
         <div class="container" id="textBox3">
+            
             <div data-aos="fade-up" id="betaText">
-                <div><span class="smallTitle">beta</span></div>
-                <div><span class="bigTitle">유니미니에서는<br>1년 내내 축제 기간!<br>유니미니로 놀러와!</span></div>
-                <div>
-                    <span class="size12 grey weight500"><br><br>
-                        배타이기에 스토어가 아닌 메일로 배포합니다.<br>
-                        상세한 이용 방법은 추후 보내주신 이메일 혹은<br>
-                        저희 인스타를 통해 알려드릴 예정입니다.<br>
-                    </span>
+                <div class="fireworksContainer">
+                    <div class="firework-1"></div>
+                    <div class="firework-2"></div>
                 </div>
+                <div><span class="smallTitle">beta</span></div>
+                <div><span class="bigTitle">유니미니에서는<br>1년 내내 축제 기간!<br>유튜브로 간접체험 그만하고,<br><span class="highlighted">진짜 캠퍼스라이프</span>를 즐겨봐요!</span></div>
             </div>
             <div data-aos="fade-up">
                 
@@ -190,21 +178,18 @@
                 </div>
                 <div>
                     <label for="option"></label>
-                    <input type="text" id="option" name="option" placeholder="개최되길 원하는 이벤트 (선택)" style="width:92%; padding-right: 16px;">
+                    <input type="text" id="option" name="option" placeholder="유니미니에서 즐기고싶은 이벤트는?!" style="width:92%; padding-right: 16px;">
                 </div>
             </div>
             
-            <button id="bigButtonJoinBeta">베타 신청하기</button>
-            <div id="shareLink">
-                <div>
-                    <button class="shareLinkBtn" data-clipboard-text="https://wjdwl002.github.io/unimini-marketing/">링크 복사하기</button>
-                </div>
-            </div>
+            <button id="bigButtonJoinBeta" data-aos="hideBtn">베타 신청하기</button>
+            <div style=" margin-left:10px; margin-top:3px;"><span class="size12 weight600 grey2">베타이기에 스토어가 아닌 메일로 배포합니다.</span></div>
+            
             <div id="linkToInstagram">
-                <img id="iconInstagram" src="./img/Instagram_icon.png" style="width:30px">
+                <img id="iconInstagram" src="./img/Instagram_icon.png" style="width:24px">
                 <a href="https://www.instagram.com/unimini_official_kr/"><span class="black size16 weight600">unimini_instagram</span></a>
                 <div class="center_align">
-                    <span class="size12 grey weight500"><br><br>인스타그램 계정에서 개최가 미리 확정된<br>밍글/유니존 리스트를 보실 수 있습니다</span>
+                    <span class="size12 grey2 weight500"><br>개최가 미리 확정된 밍글/유니존 리스트를 보실 수 있습니다</span>
                 </div>
             </div>
         </div>
