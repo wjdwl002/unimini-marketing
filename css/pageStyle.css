@@ -34,7 +34,9 @@ input,textarea{
     border-radius: 15px;
     border: none;
     background-color: #f6f1e9;
-    padding:16px;
+    padding-left:16px;
+    padding-bottom: 16px;
+    padding-top: 16px;
     resize:none;
     margin-bottom: 10px;
 }
@@ -128,7 +130,14 @@ input::placeholder, textarea::placeholder{
     }
     input.half{
         width:80%;
-    }        
+    }
+    #name{
+        padding-right:30px;
+    }
+    #number{
+        width: 80%;
+        margin-left: 20px;
+    }
 }
 
 @media screen and (max-width:380px){
@@ -139,6 +148,15 @@ input::placeholder, textarea::placeholder{
     input.half{
         width:80%;
     }        
+    .flexContainer{
+        width:100%;
+    }
+    #name{
+        padding-right:10px;
+    }
+    #number{
+        margin-left:10px;
+    }
 }
 
 .flexContainer{
@@ -403,7 +421,8 @@ footer{
   background-image: linear-gradient(135deg, #07c083, #4661ff, #07c083, #4661ff);
   background-size: 400%;
   background-position: 0% 0%;
-  border: none; }
+  border: none; 
+  font-weight: 800;}
   #bigButtonJoinBeta::before {
     content: '';
     position: absolute;
@@ -478,7 +497,7 @@ footer{
     position: absolute;
     left: 50%;
     transform: translate(-50%, 0%);    
-    top: 5800px;
+    top: 5850px;
     z-index: 1000;
 }
 #alertLinkCopied.alertInactive{
@@ -489,10 +508,10 @@ footer{
     animation:fadeUp 3.5s;
 }
 @keyframes fadeUp{
-    0% {top:5800px; opacity: 0%;}
-    10%{top:5790px; opacity: 100%;}
-    80%{top:5790px; opacity: 100%;}
-    100% {top:5800px; opacity: 0%;}
+    0% {top:5850px; opacity: 0%;}
+    10%{top:5840px; opacity: 100%;}
+    80%{top:5840px; opacity: 100%;}
+    100% {top:5850px; opacity: 0%;}
 }
 #plusBtn{
     width:30px;
