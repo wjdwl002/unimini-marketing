@@ -37,43 +37,43 @@ function hasScrolled(){
 
 const videoContainer1 = document.getElementsByClassName("videoContainer")[0];
 const video1 = document.getElementsByTagName("video")[0];
-setInterval(videoCheck,300);
+setInterval(videoCheck1,300);
 
-function videoCheck(){
+function videoCheck1(){
   if(videoContainer1.classList[2] != "aos-animate"){
     video1.pause();
-    console.log("pause");
+    console.log("pause1");
   }else{
     video1.play();
-    console.log("play");
+    console.log("play1");
   };
 }
 
 const videoContainer2 = document.getElementsByClassName("videoContainer")[1];
 const video2 = document.getElementsByTagName("video")[1];
-setInterval(videoCheck,300);
+setInterval(videoCheck2,300);
 
-function videoCheck(){
+function videoCheck2(){
   if(videoContainer2.classList[2] != "aos-animate"){
     video2.pause();
-    console.log("pause");
+    console.log("pause2");
   }else{
     video2.play();
-    console.log("play");
+    console.log("play2");
   };
 }
 
 const videoContainer3 = document.getElementsByClassName("videoContainer")[2];
 const video3 = document.getElementsByTagName("video")[2];
-setInterval(videoCheck,300);
+setInterval(videoCheck3,300);
 
-function videoCheck(){
+function videoCheck3(){
   if(videoContainer3.classList[2] != "aos-animate"){
     video3.pause();
-    console.log("pause");
+    console.log("pause3");
   }else{
     video3.play();
-    console.log("play");
+    console.log("play3");
   };
 }
 
