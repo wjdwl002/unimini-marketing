@@ -589,6 +589,7 @@ footer{
 
 /*fixedIcon*/
 .fixedIcon{
+    font-size: 16px;
     width:180px;
     height:46px;
     border-radius: 20px;
