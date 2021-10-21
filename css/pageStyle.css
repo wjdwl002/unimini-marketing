@@ -131,6 +131,16 @@ input::placeholder, textarea::placeholder{
     }        
 }
 
+@media screen and (max-width:380px){
+    .container{ width: 80%; }
+    .size15.responsive{
+        font-size: 12px !important;
+    }
+    input.half{
+        width:80%;
+    }        
+}
+
 .flexContainer{
     display: flex;
     justify-content: space-between;
@@ -446,6 +456,7 @@ footer{
     border:transparent;
     font-weight: 600;
     color:rgb(53, 53, 53);
+    text-decoration: underline;
 }
 .shareLinkBtn:active,
 .shareLinkBtn:hover{

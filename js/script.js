@@ -76,12 +76,13 @@ var snackbar = document.getElementById("alertLinkCopied")
 
 
 /*spread sheet API*/
-var inputs = $('input[type="text"]');
+var inputs = $('input[mandatory="true"]');
 var googleSubmitBtn = $('#bigButtonJoinBeta');
 
 var inputName = $('#name');
 var inputNumber = $('#number');
 var inputEmail = $('#email');
+var inputOption = $('#option')
 
 function isLoading(status){
   if(status){
@@ -123,7 +124,8 @@ $('#bigButtonJoinBeta').click(function () {
     data: {
       "이름": inputName.val(),
       "학번": inputNumber.val(),
-      "이메일": inputEmail.val()
+      "이메일": inputEmail.val(),
+      "이벤트" : inputOption.val()
     },
     success: function (response) {
       isLoading(false);
@@ -138,6 +140,7 @@ $('#bigButtonJoinBeta').click(function () {
       inputName.val('');
       inputNumber.val('');
       inputEmail.val('');
+      inputOption.val('');
     },
     error: function (request, status, error) {
       isLoading(false);
