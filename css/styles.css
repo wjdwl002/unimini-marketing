@@ -85,7 +85,7 @@ input::placeholder, textarea::placeholder{
 .container {
     width: 390px;
     height: 300px; 
-    padding-left: 2rem;
+    padding-left: 1rem;
     padding-right: 2rem;
     padding-top:2rem;
     padding-bottom: 3rem;}
@@ -147,14 +147,14 @@ input::placeholder, textarea::placeholder{
         font-size: 20px !important;
     }
     input.half{
-        width:80%;
+        width:88%;
     }
     #name{
         padding-right:30px;
     }
     #number{
-        width: 80%;
-        margin-left: 20px;
+        width: 86%;
+        margin-left: 15px;
     }
     .textBox.padding{
         padding-top:24px !important;
@@ -170,7 +170,7 @@ input::placeholder, textarea::placeholder{
         font-size:15px !important;
     }
     input.half{
-        width:80%;
+        width:88%;
     }        
     .flexContainer{
         width:100%;
@@ -179,7 +179,7 @@ input::placeholder, textarea::placeholder{
         padding-right:10px;
     }
     #number{
-        margin-left:10px;
+        margin-left:15px;
     }
     .textBox.padding{
         padding:20px;
@@ -465,9 +465,9 @@ footer{
 }
 #bigButtonJoinBeta {
   position: relative;
-  left: 50%;
+  left: 52.5%;
   transform: translate(-50%, 0%);
-  width: 100%;
+  width: 105%;
   height: 50px;
   color: #07c083;
   font-size: 22px;

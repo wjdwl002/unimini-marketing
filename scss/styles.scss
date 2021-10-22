@@ -34,7 +34,7 @@ input,textarea{
     border-radius: 15px;
     border: none;
     background-color: #f6f1e9;
-    padding-left:16px;
+    padding-left:14px;
     padding-bottom: 16px;
     padding-top: 16px;
     resize:none;
@@ -124,14 +124,14 @@ input::placeholder, textarea::placeholder{
         font-size: 13px !important;
     }
     input.half{
-        width:80%;
+        width:88%;
     }
     #name{
         padding-right:30px;
     }
     #number{
-        width: 80%;
-        margin-left: 20px;
+        width: 86%;
+        margin-left: 15px;
     }
     .textBox.padding{
         padding-top:24px !important;
@@ -144,7 +144,7 @@ input::placeholder, textarea::placeholder{
         font-size: 12px !important;
     }
     input.half{
-        width:80%;
+        width:88%;
     }        
     .flexContainer{
         width:100%;
