@@ -42,10 +42,8 @@ setInterval(videoCheck1,300);
 function videoCheck1(){
   if(videoContainer1.classList[2] != "aos-animate"){
     video1.pause();
-    console.log("pause1");
   }else{
     video1.play();
-    console.log("play1");
   };
 }
 
@@ -56,10 +54,8 @@ setInterval(videoCheck2,300);
 function videoCheck2(){
   if(videoContainer2.classList[2] != "aos-animate"){
     video2.pause();
-    console.log("pause2");
   }else{
     video2.play();
-    console.log("play2");
   };
 }
 
@@ -70,10 +66,8 @@ setInterval(videoCheck3,300);
 function videoCheck3(){
   if(videoContainer3.classList[2] != "aos-animate"){
     video3.pause();
-    console.log("pause3");
   }else{
     video3.play();
-    console.log("play3");
   };
 }
 

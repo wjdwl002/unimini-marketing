@@ -510,12 +510,11 @@ footer{
     background-color: transparent;
     border:transparent;
     font-weight: 600;
-    color:rgb(53, 53, 53);
     text-decoration: underline;
 }
 .shareLinkBtn:active,
 .shareLinkBtn:hover{
-    text-decoration: underline rgb(53, 53, 53);
+    text-decoration: underline;
 }
 
 #alertLinkCopied{
@@ -533,7 +532,7 @@ footer{
     position: absolute;
     left: 50%;
     transform: translate(-50%, 0%);    
-    bottom: 380px;
+    bottom: 360px;
     z-index: 1000;
 }
 #alertLinkCopied.alertInactive{
@@ -544,10 +543,10 @@ footer{
     animation:fadeUp 3.5s;
 }
 @keyframes fadeUp{
-    0% {bottom: 380px; opacity: 0%;}
-    10%{bottom: 390px; opacity: 100%;}
-    80%{bottom: 390px; opacity: 100%;}
-    100% {bottom: 380px; opacity: 0%;}
+    0% {bottom: 360px; opacity: 0%;}
+    10%{bottom: 370px; opacity: 100%;}
+    80%{bottom: 370px; opacity: 100%;}
+    100% {bottom: 360px; opacity: 0%;}
 }
 #plusBtn{
     width:30px;
@@ -623,13 +622,26 @@ animation-iteration-count: 1;
 [data-aos="hideBtn"].aos-animate{
     
 }
+[data-aos="showIn"]{
+    width:0px;
+    height:30px;
+    padding:4px 0px;
+}
+[data-aos="showIn"].aos-animate{
+    width:fit-content;
+    height:auto;
+    padding: 4px 17px;
+}
+
 [data-aos="colorToWhite"] {
   animation: slideOut 1.5s cubic-bezier(0.85,0,0.15,1) forwards;
   color: black;
   transition-property: color; 
+  visibility: hidden;
   }
   [data-aos="colorToWhite"].aos-animate {
     background: linear-gradient( white,white) no-repeat 0 0;
     background-size: 0 100%;
     color:white;
+    visibility: visible;
     }
