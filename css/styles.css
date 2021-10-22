@@ -579,9 +579,9 @@ footer{
     align-items: center;
 }
 
-.video:nth-child(1){
+/*.video:nth-child(1){
     background-image: url(../img/);
-}
+}*/
     
     @keyframes shake {
       0% { transform: translate(1px, 1px) rotate(0deg); }
