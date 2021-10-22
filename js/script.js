@@ -35,6 +35,7 @@ function hasScrolled(){
   lastScrollTop = nowScrollTop;
 }
 
+/*
 const videoContainer1 = document.getElementsByClassName("videoContainer")[0];
 const video1 = document.getElementsByTagName("video")[0];
 setInterval(videoCheck1,300);
@@ -70,6 +71,7 @@ function videoCheck3(){
     video3.play();
   };
 }
+*/
 
   /*movingLine
   $(window).on("load resize scroll", function() {
