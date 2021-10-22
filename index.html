@@ -102,7 +102,7 @@
                 <div style="padding-top:2rem">
                     <div style="height:140px">
                     <div><span class="smallTitle">먼저 체험해본 유니미니!</span></div>
-                    <div><span class="bigTitle white">유니미니 미리보기</span></div>
+                    <div><span class="bigTitle white">유니미니 미리보기 (절전모드 X)</span></div>
                 </div>
             </div>
                 
@@ -227,11 +227,10 @@
     </script>
     <script src="./js/script.js"></script>
     <script>
-        $(function () {
-            document.getElementById('video1').play();
-            document.getElementById('video2').play();
-            document.getElementById('video3').play();
-        })
+        document.getElementById('video1').play();
+        document.getElementById('video2').play();
+        document.getElementById('video3').play();
+
         function autoScrollDown(){
         var offset = $("#bigButtonJoinBeta").offset();
         console.log(offset);
