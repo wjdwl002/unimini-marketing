@@ -331,11 +331,13 @@ span.shadow{
 
 /*textBox*/
 .textBox{
-    box-shadow: 0 0 10px 0 rgba(0,0,0,0.08);
     margin:0px;
     margin-bottom: 16px;
     border-radius: 18px;
     line-height: 1.6;
+}
+.textBox.shadow{
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.08);
 }
 .textBox.padding{
     padding:26px;
@@ -606,11 +608,6 @@ footer{
 
 /*fixedIcon*/
 .fixedIcon{
-    font-size: 16px;
-    width:180px;
-    height:46px;
-    border-radius: 20px;
-    background-color: #07c083;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -619,6 +616,7 @@ footer{
     z-index: 100;
     border:none;
     transition: bottom .2s;
+    background: transparent;
 }
 .fixedIcon.show{
     bottom:40px;

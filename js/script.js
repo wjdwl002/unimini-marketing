@@ -24,7 +24,7 @@ function hasScrolled(){
   if(Math.abs(lastScrollTop - nowScrollTop) <= delta){
       return;
   }
-  if(nowScrollTop > offset.top- 800){
+  if(nowScrollTop > offset.top- screen.height){
       //Scroll down (하단 고정메뉴 숨김)
       console.log(1);
       fixBox.classList.remove('show');
@@ -100,7 +100,7 @@ function videoCheck3(){
 const loadingElem = document.getElementById("loadingPage");
 setInterval(function(){
   loadingElem.classList.replace("loading", "ready");
-},30000)
+},5000)
 
 /*shareLink*/
 var snackbar = document.getElementById("alertLinkCopied")
