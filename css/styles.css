@@ -51,6 +51,7 @@ input::placeholder, textarea::placeholder{
     letter-spacing: normal;
     text-align: left;
     color: #c4c0ba;
+    font-weight: 600;
  }
  input.half{
      width:90%;
@@ -106,7 +107,7 @@ input::placeholder, textarea::placeholder{
     .container#mingle {
         height: 350px; }
     .container#videos {
-        height: 1600px;
+        height: 1470px;
         background-color: black; 
         display: flex;
         flex-direction: column;
@@ -197,7 +198,7 @@ input::placeholder, textarea::placeholder{
     justify-content: start !important;
 }
 .uniminiIntroTitle{
-    width:34%;
+    width:40%;
 }
 
 
@@ -471,7 +472,7 @@ footer{
   color: #07c083;
   font-size: 22px;
   text-align: center;
-  border-radius: 25px;
+  border-radius: 20px;
   color: var(--textColor2);
   background-image: linear-gradient(135deg, #07c083, #46acff, #07c083, #46acff);
   background-size: 400%;
@@ -551,7 +552,7 @@ footer{
     position: absolute;
     left: 50%;
     transform: translate(-50%, 0%);    
-    bottom: 360px;
+    bottom: 345px;
     z-index: 1000;
 }
 #alertLinkCopied.alertInactive{
@@ -562,10 +563,10 @@ footer{
     animation:fadeUp 3.5s;
 }
 @keyframes fadeUp{
-    0% {bottom: 360px; opacity: 0%;}
-    10%{bottom: 370px; opacity: 100%;}
-    80%{bottom: 370px; opacity: 100%;}
-    100% {bottom: 360px; opacity: 0%;}
+    0% {bottom: 345px; opacity: 0%;}
+    10%{bottom: 355px; opacity: 100%;}
+    80%{bottom: 355px; opacity: 100%;}
+    100% {bottom: 345px; opacity: 0%;}
 }
 #plusBtn{
     width:30px;
