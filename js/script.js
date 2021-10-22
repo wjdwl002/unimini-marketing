@@ -96,6 +96,12 @@ function videoCheck3(){
   });
 */
 
+/*loading*/
+const loadingElem = document.getElementById("loadingPage");
+setInterval(function(){
+  loadingElem.classList.replace("loading", "ready");
+},10000)
+
 /*shareLink*/
 var snackbar = document.getElementById("alertLinkCopied")
 
