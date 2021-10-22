@@ -162,7 +162,7 @@ input::placeholder, textarea::placeholder{
 }
 
 @media screen and (max-width:380px){
-    .container{ width: 80%; }
+    .container{ width: 85%; }
     .size15.responsive{
         font-size: 12px !important;
     }
