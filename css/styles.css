@@ -721,3 +721,8 @@ animation-iteration-count: 1;
     box-shadow: 0 2.5em 0 0;
   }
 }
+
+
+.uniminiIntroText{
+    visibility: hidden;
+}
