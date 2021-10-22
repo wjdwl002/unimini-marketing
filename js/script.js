@@ -100,7 +100,7 @@ function videoCheck3(){
 const loadingElem = document.getElementById("loadingPage");
 setInterval(function(){
   loadingElem.classList.replace("loading", "ready");
-},20000)
+},30000)
 
 /*shareLink*/
 var snackbar = document.getElementById("alertLinkCopied")
