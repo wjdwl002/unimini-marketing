@@ -142,6 +142,7 @@ function checkInput(){
   var isEmpty = false;
   $.each(inputs, function (index, element) {
     if (element.value === '') {
+      console.log(inputs[1].value);
       snackbar.innerHTML="빈 칸이 있어요."
       snackbar.classList.replace("alertInactive","alertActive");
       setTimeout(function(){
