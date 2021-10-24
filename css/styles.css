@@ -517,10 +517,14 @@ footer{
   #linkToInstagram img {
     transform: translate(-20%, 30%); }
 
-
+#shareLinkContainer{
+    background: #eee9e2;
+    border-radius: 10px;
+    padding:10px 16px;
+}
 #shareLink{
     position: relative;
-    top:10px;
+    top:20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -531,6 +535,7 @@ footer{
     border:transparent;
     font-weight: 600;
     text-decoration: underline;
+    text-underline-position: under;
 }
 .shareLinkBtn:active,
 .shareLinkBtn:hover{
