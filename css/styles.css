@@ -92,10 +92,10 @@ input::placeholder, textarea::placeholder{
     .container.border {
         border: 1px solid black; }
     .container#uniminiTitle{
-        height: 640px;
+        height: 580px;
     }
     .container#textBox2{
-        height:250px;
+        height:300px;
     }
     .container#textBox3{
         height:400px;
@@ -191,14 +191,30 @@ input::placeholder, textarea::placeholder{
     justify-content: space-between;
     align-items: center;
 }
+.flexContainerLeft{
+    left:0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position:absolute;
+}
 .flexContainer.justifyCenter{
     justify-content: center !important;
 }
 .flexContainer.justifyStart{
     justify-content: start !important;
 }
-.uniminiIntroTitle{
-    width:40%;
+.barContainer{
+    height: 52px;
+    padding:5px 25px;
+    border-top-right-radius: 21px;
+    border-bottom-right-radius: 21px;
+    background-color: #f6f1e9;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 16px;
 }
 
 
@@ -225,7 +241,7 @@ span.shadow{
     color: #ff3a5b;
   }
   span.darkgreen{
-      color:#00744e !important;
+      color:#019363 !important;
   }
   span.size12 {
     font-size: 12px !important; }
