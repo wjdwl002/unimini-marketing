@@ -186,6 +186,12 @@ input::placeholder, textarea::placeholder{
     }
 }
 
+@media screen and (min-width:480px) {
+    .flexContainerLeft{
+        position:relative !important;
+    }
+}
+
 .flexContainer{
     display: flex;
     justify-content: space-between;
