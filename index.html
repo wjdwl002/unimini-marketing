@@ -54,18 +54,20 @@
             </div>
         </div>
         <div class="container" id="textBox2">
-            <div class="textBox black" id="uniminiIntroTextBox">
-                <div class="flexContainer justifyStart">
-                    <div class="right_align uniminiIntroTitle"><span class="size18 responsive white weight600">공간에</span></div>
-                    <div class="textCloud pink round button-4" data-aos-delay="50"><span class="size24 weight800 responsive" data-aos="colorToWhite" data-aos-delay="50">문화를</span></div>
-                </div>
-                <div class="flexContainer justifyStart">
-                    <div class="right_align uniminiIntroTitle"><span class="size18 responsive white weight600">문화를 통해서</span></div>
-                    <div class="textCloud green round" data-aos-delay="50"><span class="size24 weight800 responsive" data-aos="colorToWhite" data-aos-delay="50">교류를</span></div>
-                </div>
-                <div class="flexContainer justifyStart">
-                    <div class="right_align uniminiIntroTitle"><span class="size18 responsive white weight600">교류 속에서</span></div>
-                    <div class="textCloud pink round" data-aos-delay="50"><span class="size24 weight800 responsive" data-aos="colorToWhite" data-aos-delay="50">시야의 확장을</span></div>
+            <div id="uniminiIntroTextBox">
+                <div class="flexContainerLeft justifyStart">
+                    <div class="barContainer" data-aos="fade-right" data-aos-duration="800" data-aos-offset="100">
+                        <span class="size24 weight700 black">공간에</span>
+                        <span class="size24 weight900 darkgreen" style="margin-left:20px;">문화를</span>
+                    </div>
+                    <div class="barContainer" data-aos="fade-right" data-aos-duration="800" data-aos-offset="140">
+                        <span class="size24 weight700 black"> 문화를 통해</span>
+                        <span class="size24 weight900 darkgreen" style="margin-left:20px;">교류를</span>
+                    </div>
+                    <div class="barContainer" data-aos="fade-right" data-aos-duration="800" data-aos-offset="180">
+                        <span class="size24 weight700 black">교류 속에서</span>
+                        <span class="size24 weight900 darkgreen" style="margin-left:20px;">시야의 확장을</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -171,6 +173,7 @@
             </div>
         </div>
         <div class="container" id="googleForm">
+            
             <div id="googleFormContainer">
                 <div class="flexContainer" style="width:96%;">
                     <div>
@@ -179,7 +182,7 @@
                     </div>
                     <div>
                         <label for="number"></label>
-                        <input mandatory="true" class="half" type="number" id="number" name="number" placeholder="학번 ex.19" style="padding-right: 16px;">
+                        <input mandatory="true" class="half" type="text" id="number" name="number" placeholder="학번 ex.19" style="padding-right: 16px;">
                     </div>
                 </div>
                 <div>
@@ -188,21 +191,26 @@
                 </div>
                 <div>
                     <label for="option"></label>
-                    <input type="text" id="option" name="option" placeholder="이번 베타 때 어떤 이벤트가 개최되었으면 좋겠나요?" style="width:95%; padding-right: 16px;">
+                    <input type="text" id="option" name="option" placeholder="베타 때 개최 희망하는 이벤트는? (선택 입력사항)" style="width:95%; padding-right: 16px;">
                 </div>
             </div>
             
             <button id="bigButtonJoinBeta" data-aos="hideBtn">베타 신청하기</button>
             <div style=" margin-left:10px; margin-top:3px;"><span class="size12 weight600 grey2">베타이기에 스토어가 아닌 메일로 배포합니다.</span></div>
             <div id="shareLink">
-                <div>
-                    <button class="shareLinkBtn" data-clipboard-text="https://wjdwl002.github.io/unimini-marketing/">복사해서 친구들에게 공유하기</button>
+                <div >
+                    <button class="shareLinkBtn"  id="shareLinkContainer" data-clipboard-text="https://wjdwl002.github.io/unimini-marketing/">  
+                        <div style="display:flex; justify-content: center; align-items: center;" >
+                            <span class="darkGrey">유니미니 링크 복사해서 친구들과 공유해요!</span>
+                            <img src="./img/copy.png" alt="" style="width: 20px; margin-left:2px">
+                        </div>
+                    </button>
                 </div>
             </div>
 
             <div id="linkToInstagram">
                 <img id="iconInstagram" src="./img/Instagram_icon.png" style="width:24px">
-                <a href="https://www.instagram.com/unimini_official_kr/"><span class="black size16 weight600">unimini_instagram</span></a>
+                <a href="https://www.instagram.com/unimini_official_kr/" style="text-underline-position: under;"><span class="black size16 weight600">unimini_instagram</span></a>
                 <div class="center_align">
                     <span class="size12 grey2 weight500"><br>개최가 미리 확정된 밍글/유니존 리스트를 보실 수 있습니다</span>
                 </div>
